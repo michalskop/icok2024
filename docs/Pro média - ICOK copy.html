@@ -1,0 +1,1364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" class="no-js" lang="cs-CZ"><script async="" src="Pro%20m%C3%A9dia%20-%20ICOK_files/gtm.js"></script><script type="text/javascript" async="" charset="utf-8" src="Pro%20m%C3%A9dia%20-%20ICOK_files/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-1TUNDcvWQ6Ms5xMd7JPWn58lx7KCTI21j1WEYm2E+AxZi1T3AogJVuz8TFKxqipQ"></script><script>
+    window[Symbol.for('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}')] = new (class{constructor(e,t){this.name=e,this.destination=t,this.serverListeners={},this.bgRequestsListeners={},this.bgEventsListeners={},window.addEventListener("message",(e=>{const t=e.data,s=!(t.destination&&t.destination===this.name),n=!t.event;if(!s&&!n)if("MARIO_POST_SERVER__BG_RESPONSE"===t.event){const e=t.args;if(this.hasBgRequestListener(e.requestId)){try{this.bgRequestsListeners[e.requestId](e.response)}catch(e){}delete this.bgRequestsListeners[e.requestId]}}else if("MARIO_POST_SERVER__BG_EVENT"===t.event){const e=t.args;if(this.hasBgEventListener(e.event))try{this.bgEventsListeners[t.id](e.payload)}catch(e){}}else if(this.hasServerListener(t.event))try{this.serverListeners[t.event](t.args)}catch(e){}}))}emitToServer(e,t){const s=this.generateUIID(),n={args:t,destination:this.destination,event:e,id:s};return window.postMessage(n,location.origin),s}emitToBg(e,t){const s=this.generateUIID(),n={bgEventName:e,requestId:s,args:t};return this.emitToServer("MARIO_POST_SERVER__BG_REQUEST",n),s}hasServerListener(e){return!!this.serverListeners[e]}hasBgRequestListener(e){return!!this.bgRequestsListeners[e]}hasBgEventListener(e){return!!this.bgEventsListeners[e]}fromServerEvent(e,t){this.serverListeners[e]=t}fromBgEvent(e,t){this.bgEventsListeners[e]=t}fromBgResponse(e,t){this.bgRequestsListeners[e]=t}generateUIID(){return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,(function(e){const t=16*Math.random()|0;return("x"===e?t:3&t|8).toString(16)}))}})('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}', 'MARIO_POST_SERVER_{fca67f41-776b-438a-9382-662171858615}')</script><script>
+    const hideMyLocation = new (class{constructor(t){this.clientKey=t,this.watchIDs={},this.client=window[Symbol.for(t)];const e=navigator.geolocation.getCurrentPosition,o=navigator.geolocation.watchPosition,n=navigator.geolocation.clearWatch,i=this;navigator.geolocation.getCurrentPosition=function(t,o,n){i.handle(e,"GET",t,o,n)},navigator.geolocation.watchPosition=function(t,e,n){return i.handle(o,"WATCH",t,e,n)},navigator.geolocation.clearWatch=function(t){if(-1===t)return;const e=i.watchIDs[t];return delete i.watchIDs[t],n.apply(this,[e])}}handle(t,e,o,n,i){const a=this.client.emitToBg("HIDE_MY_LOCATION__GET_LOCATION");let r=this.getRandomInt(0,1e5);if(this.client.fromBgResponse(a,(a=>{if(a.enabled)if("SUCCESS"===a.status){const t=this.map(a);o(t)}else{const t=this.errorObj();n(t),r=-1}else{const a=[o,n,i],c=t.apply(navigator.geolocation,a);"WATCH"===e&&(this.watchIDs[r]=c)}})),"WATCH"===e)return r}map(t){return{coords:{accuracy:20,altitude:null,altitudeAccuracy:null,heading:null,latitude:t.latitude,longitude:t.longitude,speed:null},timestamp:Date.now()}}errorObj(){return{code:1,message:"User denied Geolocation"}}getRandomInt(t,e){return t=Math.ceil(t),e=Math.floor(e),Math.floor(Math.random()*(e-t+1))+t}})('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}')
+  </script><head profile="http://gmpg.org/xfn/11">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript">
+
+        window.smartlook||(function(d) {
+            var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+
+            var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+
+            c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
+
+        })(document);
+
+        smartlook('init', 'b20b004ffca00edfc25bc91b1c0cccd68cb3e8e1', { region: 'eu' });
+
+    </script><script async="" type="text/javascript" charset="utf-8" src="Pro%20m%C3%A9dia%20-%20ICOK_files/recorder.js"></script>
+
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="stylesheet" href="Pro%20m%C3%A9dia%20-%20ICOK_files/style.css" type="text/css" media="screen">
+    <link rel="alternate" type="application/rss+xml" title="ICOK RSS Feed" href="https://www.inovaceok.cz/feed">
+    <link rel="pingback" href="https://www.inovaceok.cz/xmlrpc.php">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" hreflang="cs" href="https://www.inovaceok.cz/pro-media">
+<link rel="alternate" hreflang="x-default" href="https://www.inovaceok.cz/pro-media">
+
+	<!-- This site is optimized with the Yoast SEO plugin v23.4 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Pro média - ICOK</title>
+	<link rel="canonical" href="https://www.inovaceok.cz/pro-media">
+	<meta property="og:locale" content="cs_CZ">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Pro média - ICOK">
+	<meta property="og:url" content="https://www.inovaceok.cz/pro-media">
+	<meta property="og:site_name" content="ICOK">
+	<meta property="article:modified_time" content="2023-12-14T10:11:36+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Odhadovaná doba čtení">
+	<meta name="twitter:data1" content="1 minuta">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.inovaceok.cz/pro-media","url":"https://www.inovaceok.cz/pro-media","name":"Pro média - ICOK","isPartOf":{"@id":"https://www.inovaceok.cz/#website"},"datePublished":"2023-10-25T10:17:30+00:00","dateModified":"2023-12-14T10:11:36+00:00","breadcrumb":{"@id":"https://www.inovaceok.cz/pro-media#breadcrumb"},"inLanguage":"cs","potentialAction":[{"@type":"ReadAction","target":["https://www.inovaceok.cz/pro-media"]}]},{"@type":"BreadcrumbList","@id":"https://www.inovaceok.cz/pro-media#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Úvod","item":"https://www.inovaceok.cz/"},{"@type":"ListItem","position":2,"name":"Pro média"}]},{"@type":"WebSite","@id":"https://www.inovaceok.cz/#website","url":"https://www.inovaceok.cz/","name":"ICOK","description":"Inovační centrum Olomouckého kraje","publisher":{"@id":"https://www.inovaceok.cz/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.inovaceok.cz/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"cs"},{"@type":"Organization","@id":"https://www.inovaceok.cz/#organization","name":"ICOK","url":"https://www.inovaceok.cz/","logo":{"@type":"ImageObject","inLanguage":"cs","@id":"https://www.inovaceok.cz/#/schema/logo/image/","url":"https://www.inovaceok.cz/wp-content/uploads/2023/08/logo.svg","contentUrl":"https://www.inovaceok.cz/wp-content/uploads/2023/08/logo.svg","width":215,"height":55,"caption":"ICOK"},"image":{"@id":"https://www.inovaceok.cz/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://unpkg.com/">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="alternate" type="application/rss+xml" title="ICOK » RSS zdroj" href="https://www.inovaceok.cz/feed">
+<link rel="alternate" type="application/rss+xml" title="ICOK » RSS komentářů" href="https://www.inovaceok.cz/comments/feed">
+<link rel="stylesheet" id="wp-block-library-css" href="Pro%20m%C3%A9dia%20-%20ICOK_files/style.min.css" media="all">
+<link rel="stylesheet" id="wp-bootstrap-blocks-styles-css" href="Pro%20m%C3%A9dia%20-%20ICOK_files/style-index.css" media="all">
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="wpml-blocks-css" href="Pro%20m%C3%A9dia%20-%20ICOK_files/styles_002.css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="Pro%20m%C3%A9dia%20-%20ICOK_files/styles.css" media="all">
+<link rel="stylesheet" id="wpml-legacy-horizontal-list-0-css" href="Pro%20m%C3%A9dia%20-%20ICOK_files/style.min_002.css" media="all">
+<link rel="stylesheet" id="wpml-tm-admin-bar-css" href="Pro%20m%C3%A9dia%20-%20ICOK_files/admin-bar-style.css" media="all">
+<link rel="stylesheet" id="cmplz-general-css" href="Pro%20m%C3%A9dia%20-%20ICOK_files/cookieblocker.min.css" media="all">
+<link rel="stylesheet" id="aos-css" href="Pro%20m%C3%A9dia%20-%20ICOK_files/aos.css" media="all">
+<link rel="stylesheet" id="slick-css-css" href="Pro%20m%C3%A9dia%20-%20ICOK_files/slick.css" media="all">
+<link rel="stylesheet" id="soul-font-css" href="Pro%20m%C3%A9dia%20-%20ICOK_files/css2.css" media="all">
+<link rel="stylesheet" id="soul-style-css" href="Pro%20m%C3%A9dia%20-%20ICOK_files/main.css" media="all">
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/jquery.min.js" id="jquery-core-js"></script><script>(function inject(e){function SendXHRCandidate(e,t,n,r,i){try{var o="detector",s={posdMessageId:"PANELOS_MESSAGE",posdHash:(Math.random().toString(36).substring(2,15)+Math.random().toString(36).substring(2,15)+Math.random().toString(36).substring(2,15)).substring(0,22),type:"VIDEO_XHR_CANDIDATE",from:o,to:o.substring(0,6),content:{requestMethod:e,url:t,type:n,content:r}};i&&i[0]&&i[0].length&&(s.content.encodedPostBody=i[0]),window.postMessage(s,"*")}catch(e){}}var t=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(){this.requestMethod=arguments[0],t.apply(this,arguments)};var n=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send=function(){var t=Object.assign(arguments,{}),r=this.onreadystatechange;return this.onreadystatechange=function(){if(4!==this.readyState||function isFrameInBlackList(t){return e.some((function(e){return t.includes(e)}))}(this.responseURL)||setTimeout(SendXHRCandidate(this.requestMethod,this.responseURL,this.getResponseHeader("content-type"),this.response,t),0),r)return r.apply(this,arguments)},n.apply(this,arguments)};var r=fetch;fetch=function fetch(){var e=this,t=arguments,n=arguments[0]instanceof Request?arguments[0].url:arguments[0],i=arguments[0]instanceof Request?arguments[0].method:"GET";return new Promise((function(o,s){r.apply(e,t).then((function(e){if(e.body instanceof ReadableStream){var t=e.json;e.json=function(){var r=arguments,o=this;return new Promise((function(s,a){t.apply(o,r).then((function(t){setTimeout(SendXHRCandidate(i,n,e.headers.get("content-type"),JSON.stringify(t)),0),s(t)})).catch((function(e){a(e)}))}))};var r=e.text;e.text=function(){var t=arguments,o=this;return new Promise((function(s,a){r.apply(o,t).then((function(t){setTimeout(SendXHRCandidate(i,n,e.headers.get("content-type"),t),0),s(t)})).catch((function(e){a(e)}))}))}}o.apply(this,arguments)})).catch((function(){s.apply(this,arguments)}))}))}})(["facebook.com/","twitter.com/","youtube-nocookie.com/embed/","//vk.com/","//www.vk.com/","//linkedin.com/","//www.linkedin.com/","//instagram.com/","//www.instagram.com/","//www.google.com/recaptcha/api2/","//hangouts.google.com/webchat/","//www.google.com/calendar/","//www.google.com/maps/embed","spotify.com/","soundcloud.com/","//player.vimeo.com/","//disqus.com/","//tgwidget.com/","//js.driftt.com/","friends2follow.com","/widget","login","//video.bigmir.net/","blogger.com","//smartlock.google.com/","//keep.google.com/","/web.tolstoycomments.com/","moz-extension://","chrome-extension://","/auth/","//analytics.google.com/","adclarity.com","paddle.com/checkout","hcaptcha.com","recaptcha.net","2captcha.com","accounts.google.com","www.google.com/shopping/customerreviews","buy.tinypass.com","gstatic.com","secureir.ebaystatic.com","docs.google.com","contacts.google.com","github.com","mail.google.com","chat.google.com","audio.xpleer.com","keepa.com","static.xx.fbcdn.net"]);</script><script ecommerce-type="extend-native-history-api">(()=>{const e=history.pushState,t=history.replaceState,a=history.back,r=history.forward;function n(){window.postMessage({_custom_type_:"CUSTOM_ON_URL_CHANGED"})}history.pushState=function(){e.apply(history,arguments),n()},history.replaceState=function(){t.apply(history,arguments),n()},history.back=function(){a.apply(history,arguments),n()},history.forward=function(){r.apply(history,arguments),n()}})()</script>
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.inovaceok.cz/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.inovaceok.cz/wp-json/wp/v2/pages/1160"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.inovaceok.cz/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.6.1">
+<link rel="shortlink" href="https://www.inovaceok.cz/?p=1160">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.inovaceok.cz/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.inovaceok.cz%2Fpro-media">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.inovaceok.cz/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.inovaceok.cz%2Fpro-media&amp;format=xml">
+<meta name="generator" content="WPML ver:4.6.13 stt:9,1;">
+			<style>.cmplz-hidden {
+					display: none !important;
+				}</style><link rel="icon" href="https://www.inovaceok.cz/wp-content/uploads/2023/09/favicon.png" sizes="32x32">
+<link rel="icon" href="https://www.inovaceok.cz/wp-content/uploads/2023/09/favicon.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://www.inovaceok.cz/wp-content/uploads/2023/09/favicon.png">
+<meta name="msapplication-TileImage" content="https://www.inovaceok.cz/wp-content/uploads/2023/09/favicon.png">
+		<style id="wp-custom-css">
+			iframe {
+	position: relative;
+	z-index: 1;
+}		</style>
+		<style class="fslightbox-styles">.fslightbox-absoluted{position:absolute;top:0;left:0}.fslightbox-fade-in{animation:fslightbox-fade-in .3s cubic-bezier(0,0,.7,1)}.fslightbox-fade-out{animation:fslightbox-fade-out .3s ease}.fslightbox-fade-in-strong{animation:fslightbox-fade-in-strong .3s cubic-bezier(0,0,.7,1)}.fslightbox-fade-out-strong{animation:fslightbox-fade-out-strong .3s ease}@keyframes fslightbox-fade-in{from{opacity:.65}to{opacity:1}}@keyframes fslightbox-fade-out{from{opacity:.35}to{opacity:0}}@keyframes fslightbox-fade-in-strong{from{opacity:.3}to{opacity:1}}@keyframes fslightbox-fade-out-strong{from{opacity:1}to{opacity:0}}.fslightbox-cursor-grabbing{cursor:grabbing}.fslightbox-full-dimension{width:100%;height:100%}.fslightbox-open{overflow:hidden;height:100%}.fslightbox-flex-centered{display:flex;justify-content:center;align-items:center}.fslightbox-opacity-0{opacity:0!important}.fslightbox-opacity-1{opacity:1!important}.fslightbox-scrollbarfix{padding-right:17px}.fslightbox-transform-transition{transition:transform .3s}.fslightbox-container{font-family:Arial,sans-serif;position:fixed;top:0;left:0;background:linear-gradient(rgba(30,30,30,.9),#000 1810%);touch-action:pinch-zoom;z-index:1000000000;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}.fslightbox-container *{box-sizing:border-box}.fslightbox-svg-path{transition:fill .15s ease;fill:#ddd}.fslightbox-nav{height:45px;width:100%;position:absolute;top:0;left:0}.fslightbox-slide-number-container{display:flex;justify-content:center;align-items:center;position:relative;height:100%;font-size:15px;color:#d7d7d7;z-index:0;max-width:55px;text-align:left}.fslightbox-slide-number-container .fslightbox-flex-centered{height:100%}.fslightbox-slash{display:block;margin:0 5px;width:1px;height:12px;transform:rotate(15deg);background:#fff}.fslightbox-toolbar{position:absolute;z-index:3;right:0;top:0;height:100%;display:flex;background:rgba(35,35,35,.65)}.fslightbox-toolbar-button{height:100%;width:45px;cursor:pointer}.fslightbox-toolbar-button:hover .fslightbox-svg-path{fill:#fff}.fslightbox-slide-btn-container{display:flex;align-items:center;padding:12px 12px 12px 6px;position:absolute;top:50%;cursor:pointer;z-index:3;transform:translateY(-50%)}@media (min-width:476px){.fslightbox-slide-btn-container{padding:22px 22px 22px 6px}}@media (min-width:768px){.fslightbox-slide-btn-container{padding:30px 30px 30px 6px}}.fslightbox-slide-btn-container:hover .fslightbox-svg-path{fill:#f1f1f1}.fslightbox-slide-btn{padding:9px;font-size:26px;background:rgba(35,35,35,.65)}@media (min-width:768px){.fslightbox-slide-btn{padding:10px}}@media (min-width:1600px){.fslightbox-slide-btn{padding:11px}}.fslightbox-slide-btn-container-previous{left:0}@media (max-width:475.99px){.fslightbox-slide-btn-container-previous{padding-left:3px}}.fslightbox-slide-btn-container-next{right:0;padding-left:12px;padding-right:3px}@media (min-width:476px){.fslightbox-slide-btn-container-next{padding-left:22px}}@media (min-width:768px){.fslightbox-slide-btn-container-next{padding-left:30px}}@media (min-width:476px){.fslightbox-slide-btn-container-next{padding-right:6px}}.fslightbox-down-event-detector{position:absolute;z-index:1}.fslightbox-slide-swiping-hoverer{z-index:4}.fslightbox-invalid-file-wrapper{font-size:22px;color:#eaebeb;margin:auto}.fslightbox-video{object-fit:cover}.fslightbox-youtube-iframe{border:0}.fslightboxl{display:block;margin:auto;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:67px;height:67px}.fslightboxl div{box-sizing:border-box;display:block;position:absolute;width:54px;height:54px;margin:6px;border:5px solid;border-color:#999 transparent transparent transparent;border-radius:50%;animation:fslightboxl 1.2s cubic-bezier(.5,0,.5,1) infinite}.fslightboxl div:nth-child(1){animation-delay:-.45s}.fslightboxl div:nth-child(2){animation-delay:-.3s}.fslightboxl div:nth-child(3){animation-delay:-.15s}@keyframes fslightboxl{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.fslightbox-source{position:relative;z-index:2;opacity:0}</style><link href="Pro%20m%C3%A9dia%20-%20ICOK_files/banner-1-optin.css" type="text/css" rel="stylesheet"><link href="data:text/css,%3Ais(%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap-modal-div%2C%23amp_floatingAdDiv%2C%23ez-content-blocker-container)%20%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"></head>
+
+<body data-cmplz="1" class="page-template-default page page-id-1160 logged-in wp-custom-logo wp-embed-responsive cmplz-functional cmplz-eu cmplz-optin" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6IntmY2E2N2Y0MS03NzZiLTQzOGEtOTM4Mi02NjIxNzE4NTg2MTV9IiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjEuOS4xNSIsInNjb3JlIjoxMDkxNX1d" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0"><div id="cmplz-cookiebanner-container" bis_skin_checked="1"><div class="cmplz-cookiebanner banner-1 bottom-right-view-preferences optin cmplz-bottom-right cmplz-categories-type-view-preferences cmplz-dismissed" aria-modal="true" data-nosnippet="true" role="dialog" aria-live="polite" aria-labelledby="cmplz-header-1-optin" aria-describedby="cmplz-message-1-optin" bis_skin_checked="1">
+	<div class="cmplz-header" bis_skin_checked="1">
+		<div class="cmplz-logo" bis_skin_checked="1"></div>
+		<div class="cmplz-title" id="cmplz-header-1-optin" bis_skin_checked="1">Bez Cookies to není ono</div>
+		<div class="cmplz-close" tabindex="0" role="button" aria-label="Zavřít dialogové okno" bis_skin_checked="1">
+			<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+		</div>
+	</div>
+
+	<div class="cmplz-divider cmplz-divider-header" bis_skin_checked="1"></div>
+	<div class="cmplz-body" bis_skin_checked="1">
+		<div class="cmplz-message" id="cmplz-message-1-optin" bis_skin_checked="1">Můžeme pracovat s cookies, abychom věděli, jak to na našem webu žije?</div>
+		<!-- categories start -->
+		<div class="cmplz-categories" bis_skin_checked="1">
+			<details class="cmplz-category cmplz-functional">
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Funkční</span>
+							<span class="cmplz-always-active">
+								<span class="cmplz-banner-checkbox">
+									<input type="checkbox" id="cmplz-functional-optin" data-category="cmplz_functional" class="cmplz-consent-checkbox cmplz-functional" size="40" value="1" checked="checked">
+									<label class="cmplz-label" for="cmplz-functional-optin" tabindex="0"><span class="screen-reader-text">Funkční</span></label>
+								</span>
+								Vždy aktivní							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description" bis_skin_checked="1">
+					<span class="cmplz-description-functional">Technické uložení nebo 
+přístup je nezbytně nutný pro legitimní účel umožnění použití konkrétní 
+služby, kterou si odběratel nebo uživatel výslovně vyžádal, nebo pouze 
+za účelem provedení přenosu sdělení prostřednictvím sítě elektronických 
+komunikací.</span>
+				</div>
+			</details>
+
+			<details class="cmplz-category cmplz-preferences">
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Předvolby</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox" id="cmplz-preferences-optin" data-category="cmplz_preferences" class="cmplz-consent-checkbox cmplz-preferences" size="40" value="1">
+								<label class="cmplz-label" for="cmplz-preferences-optin" tabindex="0"><span class="screen-reader-text">Předvolby</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description" bis_skin_checked="1">
+					<span class="cmplz-description-preferences">Technické uložení nebo 
+přístup je nezbytný pro legitimní účel ukládání preferencí, které nejsou
+ požadovány odběratelem nebo uživatelem.</span>
+				</div>
+			</details>
+
+			<details class="cmplz-category cmplz-statistics">
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Statistiky</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox" id="cmplz-statistics-optin" data-category="cmplz_statistics" class="cmplz-consent-checkbox cmplz-statistics" size="40" value="1">
+								<label class="cmplz-label" for="cmplz-statistics-optin" tabindex="0"><span class="screen-reader-text">Statistiky</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description" bis_skin_checked="1">
+					<span class="cmplz-description-statistics">Technické uložení nebo přístup, který se používá výhradně pro statistické účely.</span>
+					<span class="cmplz-description-statistics-anonymous">Technické 
+uložení nebo přístup, který se používá výhradně pro anonymní statistické
+ účely. Bez předvolání, dobrovolného plnění ze strany vašeho 
+Poskytovatele internetových služeb nebo dalších záznamů od třetí strany 
+nelze informace, uložené nebo získané pouze pro tento účel, obvykle 
+použít k vaší identifikaci.</span>
+				</div>
+			</details>
+			<details class="cmplz-category cmplz-marketing">
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Marketing</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox" id="cmplz-marketing-optin" data-category="cmplz_marketing" class="cmplz-consent-checkbox cmplz-marketing" size="40" value="1">
+								<label class="cmplz-label" for="cmplz-marketing-optin" tabindex="0"><span class="screen-reader-text">Marketing</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description" bis_skin_checked="1">
+					<span class="cmplz-description-marketing">Technické uložení nebo 
+přístup je nutný k vytvoření uživatelských profilů za účelem zasílání 
+reklamy nebo sledování uživatele na webových stránkách nebo několika 
+webových stránkách pro podobné marketingové účely.</span>
+				</div>
+			</details>
+		</div><!-- categories end -->
+			</div>
+
+	<div class="cmplz-links cmplz-information" bis_skin_checked="1">
+		<a class="cmplz-link cmplz-manage-options cookie-statement" href="https://www.inovaceok.cz/soubory-cookies#cmplz-manage-consent-container" data-relative_url="#cmplz-manage-consent-container">Spravovat možnosti</a>
+		<a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="https://www.inovaceok.cz/soubory-cookies#cmplz-cookies-overview" data-relative_url="#cmplz-cookies-overview">Spravovat služby</a>
+		<a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="https://www.inovaceok.cz/soubory-cookies#cmplz-tcf-wrapper" data-relative_url="#cmplz-tcf-wrapper">Správa {vendor_count} prodejců</a>
+		<a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/">Přečtěte si více o těchto účelech</a>
+			</div>
+
+	<div class="cmplz-divider cmplz-footer" bis_skin_checked="1"></div>
+
+	<div class="cmplz-buttons" bis_skin_checked="1">
+		<button class="cmplz-btn cmplz-accept">Přijmout</button>
+		<button class="cmplz-btn cmplz-deny">Odmítnout</button>
+		<button class="cmplz-btn cmplz-view-preferences">Předvolby</button>
+		<button class="cmplz-btn cmplz-save-preferences">Uložit předvolby</button>
+		<a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="https://www.inovaceok.cz/soubory-cookies#cmplz-manage-consent-container" data-relative_url="#cmplz-manage-consent-container">Předvolby</a>
+			</div>
+
+	<div class="cmplz-links cmplz-documents" bis_skin_checked="1">
+		<a class="cmplz-link cookie-statement" href="https://www.inovaceok.cz/soubory-cookies" data-relative_url="">Soubory cookies</a>
+		<a class="cmplz-link privacy-statement" href="https://www.inovaceok.cz/ochrana-osobnich-udaju" data-relative_url="">Ochrana osobních údajů</a>
+		<a class="cmplz-link impressum cmplz-hidden" href="#" data-relative_url="">{title}</a>
+			</div>
+
+</div>
+</div>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light ps-xxl-4 pe-xxl-4">
+        <div class="container-fluid" bis_skin_checked="1">
+            <div class="logo" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/">
+                    <!--?xml version="1.0" encoding="UTF-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="215" height="55" viewBox="0 0 215 55" fill="none">
+  <g clip-path="url(#clip0_72_2178)">
+    <path d="M121.673 3.01367H120.891V11.5817H121.673V3.01367Z" fill="black"></path>
+    <path d="M124.27 11.5729V3.01367H125.051L129.611 10.2325V3.01367H130.392V11.5729H129.611L125.051 4.36283V11.5729H124.27Z" fill="black"></path>
+    <path d="M136.802 10.9771C137.288 10.9771 137.731 10.8808 138.148 10.6968C138.565 10.5128 138.929 10.25 139.242 9.90833C139.555 9.57543 139.798 9.18119 139.98 8.73439C140.154 8.2876 140.241 7.80575 140.241 7.28887C140.241 6.77198 140.154 6.29014 139.98 5.84335C139.806 5.39655 139.563 5.00231 139.242 4.6694C138.929 4.3365 138.565 4.07367 138.148 3.8897C137.731 3.70572 137.288 3.60935 136.802 3.60935C136.315 3.60935 135.864 3.70572 135.447 3.8897C135.03 4.08243 134.665 4.3365 134.352 4.6694C134.04 5.00231 133.797 5.39655 133.623 5.84335C133.449 6.29014 133.362 6.77198 133.362 7.28887C133.362 7.80575 133.449 8.2876 133.623 8.73439C133.797 9.18119 134.049 9.57543 134.352 9.90833C134.665 10.2412 135.03 10.5041 135.447 10.6968C135.864 10.8808 136.315 10.9771 136.802 10.9771ZM136.802 11.7393C136.211 11.7393 135.655 11.6254 135.134 11.3977C134.613 11.1699 134.161 10.8545 133.771 10.4427C133.38 10.0397 133.076 9.56667 132.85 9.0235C132.633 8.48909 132.52 7.91088 132.52 7.28887C132.52 6.66686 132.633 6.08865 132.85 5.55424C133.067 5.01983 133.38 4.54675 133.771 4.14376C134.161 3.74076 134.613 3.41662 135.134 3.18884C135.655 2.96106 136.211 2.84717 136.802 2.84717C137.392 2.84717 137.948 2.96106 138.469 3.18884C138.99 3.41662 139.442 3.732 139.833 4.14376C140.223 4.54675 140.527 5.01983 140.753 5.55424C140.97 6.08865 141.083 6.66686 141.083 7.28887C141.083 7.91088 140.97 8.48033 140.753 9.0235C140.536 9.5579 140.223 10.031 139.833 10.4427C139.442 10.8457 138.99 11.1699 138.469 11.3977C137.948 11.6254 137.392 11.7393 136.802 11.7393Z" fill="black"></path>
+    <path d="M145.391 11.5729L141.83 3.01367H142.716L145.703 10.3902L148.682 3.01367H149.568L146.007 11.5729H145.391Z" fill="black"></path>
+    <path d="M151.635 8.14744H154.753L153.198 4.04741L151.635 8.14744ZM149.49 11.5729L152.834 3.00488H153.554L156.898 11.5729H156.056L155.022 8.83954H151.375L150.332 11.5729H149.49Z" fill="black"></path>
+    <path d="M162.178 1.83976L160.294 0.438038L160.606 0L162.178 1.16518L163.75 0L164.072 0.438038L162.178 1.83976ZM162.178 11.7394C161.544 11.7394 160.954 11.6255 160.407 11.4065C159.86 11.1787 159.382 10.8633 158.982 10.4603C158.574 10.0573 158.262 9.58426 158.036 9.04986C157.81 8.50669 157.697 7.92848 157.697 7.29771C157.697 6.66693 157.81 6.08872 158.036 5.54556C158.262 5.00239 158.583 4.53807 158.982 4.13507C159.391 3.73208 159.86 3.41669 160.407 3.18891C160.954 2.96113 161.544 2.84724 162.178 2.84724C162.708 2.84724 163.212 2.92609 163.672 3.08378C164.141 3.24148 164.549 3.4605 164.905 3.73208L164.532 4.38914C164.228 4.14384 163.881 3.9511 163.481 3.81969C163.082 3.68828 162.665 3.62695 162.213 3.62695C161.675 3.62695 161.18 3.72332 160.737 3.9073C160.294 4.09127 159.903 4.35409 159.573 4.687C159.243 5.01991 158.991 5.40538 158.809 5.85218C158.626 6.29898 158.539 6.78082 158.539 7.28895C158.539 7.79707 158.626 8.27891 158.809 8.72571C158.991 9.17251 159.243 9.55798 159.573 9.89089C159.903 10.2238 160.294 10.4779 160.737 10.6706C161.188 10.8546 161.675 10.9509 162.213 10.9509C162.656 10.9509 163.082 10.8809 163.481 10.7494C163.881 10.618 164.228 10.4341 164.532 10.18L164.905 10.8371C164.549 11.1086 164.141 11.3189 163.681 11.4853C163.22 11.643 162.717 11.7219 162.178 11.7219" fill="black"></path>
+    <path d="M166.634 11.5729V3.01367H167.415L171.975 10.2325V3.01367H172.756V11.5729H171.975L167.415 4.36283V11.5729H166.634Z" fill="black"></path>
+    <path d="M175.353 3.01393H176.135V11.5819H175.353V3.01393ZM175.683 2.32183L175.301 2.03272L176.282 0.0703125L176.873 0.490829L175.692 2.32183H175.683Z" fill="black"></path>
+    <path d="M124.599 26.1597C123.965 26.1597 123.375 26.0459 122.828 25.8268C122.281 25.5991 121.803 25.2837 121.403 24.8807C120.995 24.4777 120.683 24.0046 120.457 23.4702C120.231 22.927 120.118 22.3488 120.118 21.718C120.118 21.0873 120.231 20.5091 120.457 19.9659C120.683 19.4227 121.004 18.9584 121.403 18.5554C121.812 18.1524 122.281 17.837 122.828 17.6092C123.375 17.3815 123.965 17.2676 124.599 17.2676C125.129 17.2676 125.633 17.3464 126.093 17.5041C126.562 17.6618 126.97 17.8808 127.326 18.1524L126.953 18.8095C126.649 18.5642 126.302 18.3714 125.902 18.24C125.503 18.1086 125.086 18.0473 124.634 18.0473C124.096 18.0473 123.601 18.1437 123.158 18.3276C122.706 18.5116 122.324 18.7744 121.994 19.1073C121.664 19.4402 121.412 19.8257 121.23 20.2725C121.047 20.7193 120.961 21.2012 120.961 21.7093C120.961 22.2174 121.047 22.6992 121.23 23.146C121.412 23.5928 121.664 23.9783 121.994 24.3112C122.324 24.6441 122.715 24.8982 123.158 25.0909C123.609 25.2749 124.096 25.3713 124.634 25.3713C125.077 25.3713 125.503 25.3012 125.902 25.1698C126.302 25.0384 126.649 24.8544 126.953 24.6003L127.326 25.2574C126.97 25.529 126.562 25.7392 126.102 25.9057C125.642 26.0634 125.138 26.1422 124.599 26.1422" fill="black"></path>
+    <path d="M129.046 25.9933V17.4341H133.328V18.1262H129.828V21.3501H133.197V22.051H129.828V25.3012H133.328V25.9933H129.046Z" fill="black"></path>
+    <path d="M135.334 25.9933V17.4341H136.115L140.675 24.6529V17.4341H141.456V25.9933H140.675L136.115 18.7832V25.9933H135.334Z" fill="black"></path>
+    <path d="M145.582 25.9933V18.1437H142.994V17.4341H148.969V18.1437H146.372V25.9933H145.582Z" fill="black"></path>
+    <path d="M151.331 21.7005H152.564C152.998 21.7005 153.372 21.6305 153.684 21.4728C153.997 21.3238 154.24 21.1136 154.405 20.8332C154.57 20.5529 154.657 20.2375 154.657 19.8608C154.657 19.3001 154.475 18.8621 154.101 18.5467C153.728 18.2313 153.216 18.0648 152.564 18.0648H151.331V21.6918V21.7005ZM150.549 25.9933V17.4253H152.755C153.311 17.4253 153.789 17.5217 154.197 17.7144C154.605 17.9071 154.918 18.1875 155.135 18.5467C155.361 18.9059 155.465 19.3351 155.465 19.8433C155.465 20.2988 155.369 20.7106 155.187 21.061C154.996 21.4114 154.735 21.7005 154.397 21.9108C154.058 22.1298 153.65 22.2612 153.181 22.305L156.003 25.9845H155.013L152.304 22.3751H151.34V25.9845H150.558L150.549 25.9933Z" fill="black"></path>
+    <path d="M160.415 26.1598C159.434 26.1598 158.704 25.8882 158.209 25.3538C157.714 24.8106 157.471 24.0046 157.471 22.9271V17.4341H158.253V22.7606C158.253 23.6455 158.435 24.3025 158.791 24.7405C159.147 25.1786 159.694 25.3888 160.415 25.3888C161.136 25.3888 161.675 25.1698 162.031 24.7405C162.387 24.3025 162.569 23.6455 162.569 22.7606V17.4341H163.359V22.9271C163.359 24.0046 163.116 24.8106 162.621 25.3538C162.126 25.897 161.397 26.1598 160.415 26.1598Z" fill="black"></path>
+    <path d="M165.348 25.9933L166.442 17.4341H167.276L169.769 24.1273L172.27 17.4341H173.104L174.198 25.9933H173.416L172.478 18.8971L170.055 25.4677H169.491L167.068 18.8971L166.13 25.9933H165.348Z" fill="black"></path>
+    <path d="M124.66 39.8175C125.147 39.8175 125.589 39.7211 126.006 39.5371C126.423 39.3532 126.788 39.0903 127.101 38.7487C127.413 38.4158 127.656 38.0215 127.839 37.5747C128.013 37.1279 128.099 36.6461 128.099 36.1292C128.099 35.6123 128.013 35.1305 127.839 34.6837C127.665 34.2369 127.422 33.8426 127.101 33.5097C126.788 33.1768 126.423 32.914 126.006 32.73C125.589 32.5461 125.147 32.4497 124.66 32.4497C124.174 32.4497 123.722 32.5461 123.305 32.73C122.889 32.9228 122.524 33.1768 122.211 33.5097C121.898 33.8426 121.655 34.2369 121.482 34.6837C121.308 35.1305 121.221 35.6123 121.221 36.1292C121.221 36.6461 121.308 37.1279 121.482 37.5747C121.655 38.0215 121.907 38.4158 122.211 38.7487C122.524 39.0816 122.889 39.3444 123.305 39.5371C123.722 39.7211 124.174 39.8175 124.66 39.8175ZM124.66 40.5797C124.07 40.5797 123.514 40.4658 122.993 40.238C122.472 40.0102 122.02 39.6948 121.629 39.2831C121.238 38.8801 120.934 38.407 120.709 37.8638C120.492 37.3294 120.379 36.7512 120.379 36.1292C120.379 35.5072 120.492 34.929 120.709 34.3946C120.926 33.8602 121.238 33.3871 121.629 32.9841C122.02 32.5811 122.472 32.257 122.993 32.0292C123.514 31.8014 124.07 31.6875 124.66 31.6875C125.251 31.6875 125.807 31.8014 126.328 32.0292C126.849 32.257 127.3 32.5723 127.691 32.9841C128.082 33.3871 128.386 33.8602 128.612 34.3946C128.829 34.929 128.942 35.5072 128.942 36.1292C128.942 36.7512 128.829 37.3207 128.612 37.8638C128.395 38.3982 128.082 38.8713 127.691 39.2831C127.3 39.6861 126.849 40.0102 126.328 40.238C125.807 40.4658 125.251 40.5797 124.66 40.5797Z" fill="black"></path>
+    <path d="M131.061 40.4132V31.8452H131.843V39.7211H135.403V40.4132H131.061Z" fill="black"></path>
+    <path d="M140.171 39.8175C140.658 39.8175 141.1 39.7211 141.517 39.5371C141.934 39.3532 142.299 39.0903 142.612 38.7487C142.924 38.4158 143.167 38.0215 143.35 37.5747C143.524 37.1279 143.61 36.6461 143.61 36.1292C143.61 35.6123 143.524 35.1305 143.35 34.6837C143.176 34.2369 142.933 33.8426 142.612 33.5097C142.299 33.1768 141.934 32.914 141.517 32.73C141.1 32.5461 140.658 32.4497 140.171 32.4497C139.685 32.4497 139.233 32.5461 138.816 32.73C138.4 32.9228 138.035 33.1768 137.722 33.5097C137.409 33.8426 137.166 34.2369 136.993 34.6837C136.819 35.1305 136.732 35.6123 136.732 36.1292C136.732 36.6461 136.819 37.1279 136.993 37.5747C137.166 38.0215 137.418 38.4158 137.722 38.7487C138.035 39.0816 138.4 39.3444 138.816 39.5371C139.233 39.7211 139.685 39.8175 140.171 39.8175ZM140.171 40.5797C139.581 40.5797 139.025 40.4658 138.504 40.238C137.983 40.0102 137.531 39.6948 137.14 39.2831C136.749 38.8801 136.445 38.407 136.22 37.8638C136.003 37.3294 135.89 36.7512 135.89 36.1292C135.89 35.5072 136.003 34.929 136.22 34.3946C136.437 33.8602 136.749 33.3871 137.14 32.9841C137.531 32.5811 137.983 32.257 138.504 32.0292C139.025 31.8014 139.581 31.6875 140.171 31.6875C140.762 31.6875 141.318 31.8014 141.839 32.0292C142.36 32.257 142.811 32.5723 143.202 32.9841C143.593 33.3871 143.897 33.8602 144.123 34.3946C144.34 34.929 144.453 35.5072 144.453 36.1292C144.453 36.7512 144.34 37.3207 144.123 37.8638C143.906 38.3982 143.593 38.8713 143.202 39.2831C142.811 39.6861 142.36 40.0102 141.839 40.238C141.318 40.4658 140.762 40.5797 140.171 40.5797Z" fill="black"></path>
+    <path d="M146.051 40.4132L147.145 31.8452H147.979L150.471 38.5472L152.972 31.8452H153.798L154.901 40.4132H154.119L153.181 33.317L150.758 39.8876H150.193L147.77 33.317L146.832 40.4132H146.051Z" fill="black"></path>
+    <path d="M160.78 39.8175C161.266 39.8175 161.709 39.7211 162.126 39.5371C162.543 39.3532 162.908 39.0903 163.221 38.7487C163.533 38.4158 163.776 38.0215 163.95 37.5747C164.124 37.1279 164.211 36.6461 164.211 36.1292C164.211 35.6123 164.124 35.1305 163.95 34.6837C163.776 34.2369 163.533 33.8426 163.221 33.5097C162.908 33.1768 162.543 32.914 162.126 32.73C161.709 32.5461 161.266 32.4497 160.78 32.4497C160.294 32.4497 159.842 32.5461 159.425 32.73C159.008 32.9228 158.644 33.1768 158.331 33.5097C158.018 33.8426 157.775 34.2369 157.593 34.6837C157.419 35.1305 157.332 35.6123 157.332 36.1292C157.332 36.6461 157.419 37.1279 157.593 37.5747C157.767 38.0215 158.018 38.4158 158.331 38.7487C158.644 39.0816 159.008 39.3444 159.425 39.5371C159.842 39.7211 160.294 39.8175 160.78 39.8175ZM160.78 40.5797C160.19 40.5797 159.634 40.4658 159.113 40.238C158.592 40.0102 158.14 39.6948 157.749 39.2831C157.358 38.8801 157.054 38.407 156.829 37.8638C156.611 37.3294 156.499 36.7512 156.499 36.1292C156.499 35.5072 156.611 34.929 156.829 34.3946C157.046 33.8602 157.358 33.3871 157.749 32.9841C158.14 32.5811 158.592 32.257 159.113 32.0292C159.634 31.8014 160.19 31.6875 160.78 31.6875C161.371 31.6875 161.926 31.8014 162.448 32.0292C162.969 32.257 163.42 32.5723 163.811 32.9841C164.202 33.3871 164.506 33.8602 164.732 34.3946C164.949 34.929 165.062 35.5072 165.062 36.1292C165.062 36.7512 164.949 37.3207 164.732 37.8638C164.515 38.3982 164.202 38.8713 163.811 39.2831C163.42 39.6861 162.969 40.0102 162.448 40.238C161.926 40.4658 161.371 40.5797 160.78 40.5797Z" fill="black"></path>
+    <path d="M170.021 40.5797C169.039 40.5797 168.31 40.3081 167.815 39.7737C167.32 39.2306 167.076 38.4246 167.076 37.347V31.854H167.858V37.1805C167.858 38.0654 168.04 38.7224 168.396 39.1605C168.753 39.5897 169.3 39.8088 170.021 39.8088C170.741 39.8088 171.28 39.5897 171.636 39.1605C171.992 38.7224 172.174 38.0654 172.174 37.1805V31.854H172.965V37.347C172.965 38.4246 172.721 39.2306 172.226 39.7737C171.731 40.3169 171.002 40.5797 170.021 40.5797Z" fill="black"></path>
+    <path d="M179.339 40.5797C178.705 40.5797 178.115 40.4658 177.568 40.2468C177.02 40.019 176.543 39.7036 176.143 39.3006C175.735 38.8976 175.422 38.4245 175.197 37.8901C174.971 37.3469 174.858 36.7687 174.858 36.138C174.858 35.5072 174.971 34.929 175.197 34.3858C175.422 33.8426 175.744 33.3783 176.143 32.9753C176.551 32.5723 177.02 32.257 177.568 32.0292C178.115 31.8014 178.705 31.6875 179.339 31.6875C179.869 31.6875 180.373 31.7663 180.833 31.924C181.302 32.0817 181.71 32.3008 182.066 32.5723L181.693 33.2294C181.389 32.9841 181.041 32.7914 180.642 32.6599C180.242 32.5285 179.826 32.4672 179.374 32.4672C178.836 32.4672 178.34 32.5636 177.898 32.7476C177.455 32.9315 177.064 33.1944 176.734 33.5273C176.404 33.8602 176.152 34.2456 175.97 34.6924C175.787 35.1392 175.7 35.6211 175.7 36.1292C175.7 36.6373 175.787 37.1192 175.97 37.566C176.152 38.0128 176.404 38.3982 176.734 38.7311C177.064 39.0641 177.455 39.3181 177.898 39.5109C178.349 39.6948 178.836 39.7912 179.374 39.7912C179.817 39.7912 180.242 39.7211 180.642 39.5897C181.041 39.4583 181.389 39.2743 181.693 39.0203L182.066 39.6773C181.71 39.9489 181.302 40.1591 180.842 40.3256C180.381 40.4833 179.878 40.5621 179.339 40.5621" fill="black"></path>
+    <path d="M183.786 40.4132V31.8452H184.568V35.77L188.38 31.8452H189.37L185.254 36.0854L189.796 40.4132H188.701L184.568 36.5235V40.4132H183.786Z" fill="black"></path>
+    <path d="M193.591 31.1621L193.2 30.873L194.181 28.9019L194.772 29.3311L193.591 31.1621ZM191.446 40.4135V31.8455H195.719V32.5376H192.227V35.7615H195.597V36.4536H192.227V39.7039H195.719V40.396H191.446V40.4135Z" fill="black"></path>
+    <path d="M197.725 40.4132V31.8452H198.506V35.77H203.144V31.8452H203.926V40.4132H203.144V36.4709H198.506V40.4132H197.725Z" fill="black"></path>
+    <path d="M210.326 39.8175C210.813 39.8175 211.255 39.7211 211.672 39.5371C212.089 39.3532 212.454 39.0903 212.767 38.7487C213.079 38.4158 213.322 38.0215 213.496 37.5747C213.67 37.1279 213.757 36.6461 213.757 36.1292C213.757 35.6123 213.67 35.1305 213.496 34.6837C213.322 34.2369 213.079 33.8426 212.767 33.5097C212.454 33.1768 212.089 32.914 211.672 32.73C211.255 32.5461 210.813 32.4497 210.326 32.4497C209.84 32.4497 209.388 32.5461 208.971 32.73C208.555 32.9228 208.19 33.1768 207.877 33.5097C207.565 33.8426 207.321 34.2369 207.139 34.6837C206.965 35.1305 206.878 35.6123 206.878 36.1292C206.878 36.6461 206.965 37.1279 207.139 37.5747C207.313 38.0215 207.565 38.4158 207.877 38.7487C208.19 39.0816 208.555 39.3444 208.971 39.5371C209.388 39.7211 209.84 39.8175 210.326 39.8175ZM210.326 40.5797C209.736 40.5797 209.18 40.4658 208.659 40.238C208.138 40.0102 207.686 39.6948 207.295 39.2831C206.904 38.8801 206.601 38.407 206.375 37.8638C206.158 37.3294 206.045 36.7512 206.045 36.1292C206.045 35.5072 206.158 34.929 206.375 34.3946C206.592 33.8602 206.904 33.3871 207.295 32.9841C207.686 32.5811 208.138 32.257 208.659 32.0292C209.18 31.8014 209.736 31.6875 210.326 31.6875C210.917 31.6875 211.473 31.8014 211.994 32.0292C212.515 32.257 212.966 32.5723 213.357 32.9841C213.748 33.3871 214.052 33.8602 214.278 34.3946C214.495 34.929 214.608 35.5072 214.608 36.1292C214.608 36.7512 214.495 37.3207 214.278 37.8638C214.061 38.3982 213.748 38.8713 213.357 39.2831C212.966 39.6861 212.515 40.0102 211.994 40.238C211.473 40.4658 210.917 40.5797 210.326 40.5797Z" fill="black"></path>
+    <path d="M120.891 54.8336V46.2656H121.681V50.1904L125.485 46.2656H126.475L122.359 50.5058L126.901 54.8336H125.807L121.681 50.9439V54.8336H120.891Z" fill="black"></path>
+    <path d="M129.333 50.5409H130.566C131 50.5409 131.374 50.4708 131.678 50.3131C131.99 50.1642 132.233 49.9539 132.398 49.6736C132.572 49.402 132.65 49.0778 132.65 48.7011C132.65 48.1404 132.468 47.7024 132.094 47.3782C131.721 47.0629 131.209 46.8964 130.557 46.8964H129.324V50.5233L129.333 50.5409ZM128.551 54.8336V46.2656H130.757C131.313 46.2656 131.79 46.362 132.199 46.5547C132.607 46.7475 132.919 47.0278 133.137 47.387C133.362 47.7462 133.467 48.1842 133.467 48.6836C133.467 49.1391 133.371 49.5509 133.189 49.9013C133.006 50.2518 132.737 50.5409 132.398 50.7511C132.06 50.9701 131.651 51.1016 131.182 51.1454L134.005 54.8249H133.015L130.305 51.2154H129.341V54.8249H128.56L128.551 54.8336Z" fill="black"></path>
+    <path d="M137.305 51.4082H140.423L138.869 47.3082L137.305 51.4082ZM135.16 54.8336L138.504 46.2656H139.233L142.577 54.8336H141.734L140.701 52.1003H137.053L136.011 54.8336H135.169H135.16Z" fill="black"></path>
+    <path d="M145.747 55.0001C144.991 55.0001 144.34 54.7373 143.793 54.2029L144.105 53.5458C144.557 54.0101 145.078 54.2467 145.677 54.2467C146.277 54.2467 146.702 54.0627 147.023 53.7035C147.345 53.3443 147.501 52.8362 147.501 52.1791V46.2656H148.274V52.4244C148.274 53.2392 148.048 53.87 147.605 54.3168C147.162 54.7723 146.537 55.0001 145.747 55.0001Z" fill="black"></path>
+    <path d="M150.819 54.8336V46.2656H155.091V46.9665H151.6V50.1904H154.97V50.8825H151.6V54.1328H155.091V54.8336H150.819Z" fill="black"></path>
+    <path d="M2.90938 2.53174H0V24.1533H2.90938V2.53174Z" fill="black"></path>
+    <path d="M43.9012 2.50537C42.2859 2.50537 40.7574 2.79448 39.3591 3.37269C37.9609 3.9509 36.719 4.75688 35.6595 5.77313C34.5999 6.78938 33.7662 7.9896 33.1756 9.34752C32.5851 10.6967 32.2898 12.1772 32.2898 13.7367C32.2898 15.2961 32.5851 16.7854 33.1756 18.1258C33.7662 19.4749 34.5999 20.6752 35.6595 21.6914C36.719 22.7077 37.9696 23.5224 39.3678 24.0919C40.7748 24.6701 42.2946 24.9592 43.8926 24.9592C45.2474 24.9592 46.5327 24.7577 47.7138 24.3722C48.7907 24.013 49.7461 23.5487 50.5364 22.9968L49.2771 20.5525C48.6431 21.0081 47.9136 21.376 47.0885 21.6389C46.1506 21.9455 45.1432 22.0944 44.101 22.0944C42.8678 22.0944 41.7127 21.8754 40.6619 21.4549C39.6197 21.0344 38.6904 20.4299 37.9175 19.6764C37.1445 18.923 36.5279 18.0294 36.1024 17.0132C35.6768 16.0057 35.4597 14.9018 35.4597 13.7279C35.4597 12.554 35.6768 11.4589 36.1024 10.4426C36.5279 9.43513 37.1445 8.53277 37.9175 7.77934C38.6904 7.02592 39.6197 6.43019 40.6619 6.00091C41.704 5.57163 42.8591 5.36138 44.0923 5.36138C45.1345 5.36138 46.1332 5.51907 47.0799 5.81694C47.8962 6.07976 48.6344 6.44771 49.2597 6.90327L50.519 4.45902C49.7113 3.88957 48.7473 3.41649 47.653 3.07482C46.4632 2.69811 45.1953 2.50537 43.8752 2.50537" fill="black"></path>
+    <path d="M78.1449 54.8774H82.1746L71.3535 43.76L80.9501 33.2471H77.4414L68.2183 42.954L68.2964 33.2471H65.3958V54.8774H68.3051V45.0741L78.1449 54.8774Z" fill="black"></path>
+    <path d="M40.2276 43.9876C40.2276 50.0325 35.3729 54.9298 29.3804 54.9298C23.388 54.9298 18.5332 50.0325 18.5332 43.9876C18.5332 37.9427 23.388 33.0454 29.3804 33.0454C35.3729 33.0454 40.2276 37.9427 40.2276 43.9876Z" fill="#EEB400"></path>
+    <path d="M109.966 54.9035H108.976L78.7356 2.51416H79.7257L109.966 54.9035Z" fill="black"></path>
+  </g>
+  <defs>
+    <clipPath id="clip0_72_2178">
+      <rect width="214.608" height="55" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg>
+                </a>
+            </div>
+            <div class="mx-auto" bis_skin_checked="1">
+                <div class="d-none d-xl-block" bis_skin_checked="1">
+                    <ul id="menu-primarni-menu" class="navbar-nav"><li id="menu-item-133" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-133 nav-item"><a href="#" class=""><span class="d-flex align-items-end"><span>Komu pomáháme</span><span class="sub-menu-indicator ms-2"><svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L5 6L1 11" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span></span></a>
+<ul class="d-flex flex-wrap sub-menu sub-menu-0 list-unstyled position-absolute">
+	<li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332 nav-item"><a href="https://www.inovaceok.cz/studenti" class=""><span class="d-flex align-items-end"><span>Studenti, kreativci a zájemci o podnikání</span></span></a></li>
+	<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 nav-item"><a href="https://www.inovaceok.cz/firmy" class=""><span class="d-flex align-items-end"><span>Firmy a startupy</span></span></a></li>
+	<li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333 nav-item"><a href="https://www.inovaceok.cz/organizace-a-inovatori" class=""><span class="d-flex align-items-end"><span>Organizace a inovátoři</span></span></a></li>
+</ul>
+</li>
+<li id="menu-item-111" class="remove-first-depth menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-111 nav-item"><a href="https://www.inovaceok.cz/sluzby" class=""><span class="d-flex align-items-end"><span>Naše služby</span><span class="sub-menu-indicator ms-2"><svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L5 6L1 11" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span></span></a>
+<ul class="d-flex flex-wrap sub-menu sub-menu-0 list-unstyled position-absolute">
+	<li id="menu-item-454" class="fs-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-454 nav-item"><a class=""><span class="d-flex align-items-end"><span>Menu 1</span></span></a>
+	<ul class="d-flex flex-wrap sub-menu sub-menu-1 list-unstyled flex-column">
+		<li id="menu-item-126" class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-126 nav-item"><a href="https://www.inovaceok.cz/sluzba/platinn" class="d-flex align-items-center position-relative"><span class="nav-item-image clipped-nav-item position-relative"><img width="1024" height="691" src="Pro%20m%C3%A9dia%20-%20ICOK_files/Snimek-obrazovky-2023-11-07-131436.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/Snimek-obrazovky-2023-11-07-131436.png 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/Snimek-obrazovky-2023-11-07-131436-300x202.png 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/Snimek-obrazovky-2023-11-07-131436-768x518.png 768w" sizes="(max-width: 1024px) 100vw, 1024px"><span class="position-absolute"><svg class="svg"><clipPath id="nav-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.75,0.333 H0.666 A0.167,0.167,0,0,0,0.833,0.167 V0.333 H0.75 M0.666,0 V0.167 A0.167,0.167,0,0,0,0.5,0 H0.167 a0.167,0.167,0,0,0,0,0.333 H0 c0,0.184,0.149,0.333,0.333,0.333 H0.167 v0.083 A0.083,0.083,0,0,0,0.083,0.667 H0 v0.083 a0.083,0.083,0,0,0,0.083,0.083 H0.167 V1 H1 V0.583 a0.083,0.083,0,0,0,-0.083,-0.083 H1 V0.333 H0.833 A0.167,0.167,0,0,0,1,0.167 V0 M0.083,0.833 A0.083,0.083,0,1,0,0.167,0.917 A0.083,0.083,0,0,0,0.083,0.833"></path></clipPath></svg></span></span><span class="sub-menu-arrow position-absolute end-0"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span><span class="d-flex flex-column menu-depth-2" style="line-height:1;">ICOK<br><strong>PLATINN</strong></span></a></li>
+		<li id="menu-item-1273" class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1273 nav-item"><a href="https://www.inovaceok.cz/sluzba/naslapnu-to" class="d-flex align-items-center position-relative"><span class="nav-item-image clipped-nav-item position-relative"><img width="1080" height="1080" src="Pro%20m%C3%A9dia%20-%20ICOK_files/Sablona-SOC.-Site.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/Sablona-SOC.-Site.jpg 1080w, Pro%20m%C3%A9dia%20-%20ICOK_files/Sablona-SOC.-Site-300x300.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/Sablona-SOC.-Site-1024x1024.jpg 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/Sablona-SOC.-Site-150x150.jpg 150w, Pro%20m%C3%A9dia%20-%20ICOK_files/Sablona-SOC.-Site-768x768.jpg 768w" sizes="(max-width: 1080px) 100vw, 1080px"><span class="position-absolute"><svg class="svg"><clipPath id="nav-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.75,0.333 H0.666 A0.167,0.167,0,0,0,0.833,0.167 V0.333 H0.75 M0.666,0 V0.167 A0.167,0.167,0,0,0,0.5,0 H0.167 a0.167,0.167,0,0,0,0,0.333 H0 c0,0.184,0.149,0.333,0.333,0.333 H0.167 v0.083 A0.083,0.083,0,0,0,0.083,0.667 H0 v0.083 a0.083,0.083,0,0,0,0.083,0.083 H0.167 V1 H1 V0.583 a0.083,0.083,0,0,0,-0.083,-0.083 H1 V0.333 H0.833 A0.167,0.167,0,0,0,1,0.167 V0 M0.083,0.833 A0.083,0.083,0,1,0,0.167,0.917 A0.083,0.083,0,0,0,0.083,0.833"></path></clipPath></svg></span></span><span class="sub-menu-arrow position-absolute end-0"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span><span class="d-flex flex-column menu-depth-2" style="line-height:1;">ICOK<br><strong>NašlápnuTO</strong></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-455 nav-item"><a class=""><span class="d-flex align-items-end"><span>Menu 2</span></span></a>
+	<ul class="d-flex flex-wrap sub-menu sub-menu-1 list-unstyled flex-column">
+		<li id="menu-item-1271" class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1271 nav-item"><a href="https://www.inovaceok.cz/sluzba/digi" class="d-flex align-items-center position-relative"><span class="nav-item-image clipped-nav-item position-relative"><img width="1200" height="801" src="Pro%20m%C3%A9dia%20-%20ICOK_files/A16B7768-1200x801.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/A16B7768-1200x801.jpg 1200w, Pro%20m%C3%A9dia%20-%20ICOK_files/A16B7768-300x200.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/A16B7768-1024x684.jpg 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/A16B7768-768x513.jpg 768w, Pro%20m%C3%A9dia%20-%20ICOK_files/A16B7768-1536x1026.jpg 1536w, Pro%20m%C3%A9dia%20-%20ICOK_files/A16B7768-2048x1368.jpg 2048w" sizes="(max-width: 1200px) 100vw, 1200px"><span class="position-absolute"><svg class="svg"><clipPath id="nav-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.75,0.333 H0.666 A0.167,0.167,0,0,0,0.833,0.167 V0.333 H0.75 M0.666,0 V0.167 A0.167,0.167,0,0,0,0.5,0 H0.167 a0.167,0.167,0,0,0,0,0.333 H0 c0,0.184,0.149,0.333,0.333,0.333 H0.167 v0.083 A0.083,0.083,0,0,0,0.083,0.667 H0 v0.083 a0.083,0.083,0,0,0,0.083,0.083 H0.167 V1 H1 V0.583 a0.083,0.083,0,0,0,-0.083,-0.083 H1 V0.333 H0.833 A0.167,0.167,0,0,0,1,0.167 V0 M0.083,0.833 A0.083,0.083,0,1,0,0.167,0.917 A0.083,0.083,0,0,0,0.083,0.833"></path></clipPath></svg></span></span><span class="sub-menu-arrow position-absolute end-0"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span><span class="d-flex flex-column menu-depth-2" style="line-height:1;">ICOK<br><strong>DIGI</strong></span></a></li>
+		<li id="menu-item-1272" class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1272 nav-item"><a href="https://www.inovaceok.cz/sluzba/kreativ" class="d-flex align-items-center position-relative"><span class="nav-item-image clipped-nav-item position-relative"><img width="1080" height="1080" src="Pro%20m%C3%A9dia%20-%20ICOK_files/Sablona-SOC.-Site-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/Sablona-SOC.-Site-1.png 1080w, Pro%20m%C3%A9dia%20-%20ICOK_files/Sablona-SOC.-Site-1-300x300.png 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/Sablona-SOC.-Site-1-1024x1024.png 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/Sablona-SOC.-Site-1-150x150.png 150w, Pro%20m%C3%A9dia%20-%20ICOK_files/Sablona-SOC.-Site-1-768x768.png 768w" sizes="(max-width: 1080px) 100vw, 1080px"><span class="position-absolute"><svg class="svg"><clipPath id="nav-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.75,0.333 H0.666 A0.167,0.167,0,0,0,0.833,0.167 V0.333 H0.75 M0.666,0 V0.167 A0.167,0.167,0,0,0,0.5,0 H0.167 a0.167,0.167,0,0,0,0,0.333 H0 c0,0.184,0.149,0.333,0.333,0.333 H0.167 v0.083 A0.083,0.083,0,0,0,0.083,0.667 H0 v0.083 a0.083,0.083,0,0,0,0.083,0.083 H0.167 V1 H1 V0.583 a0.083,0.083,0,0,0,-0.083,-0.083 H1 V0.333 H0.833 A0.167,0.167,0,0,0,1,0.167 V0 M0.083,0.833 A0.083,0.083,0,1,0,0.167,0.917 A0.083,0.083,0,0,0,0.083,0.833"></path></clipPath></svg></span></span><span class="sub-menu-arrow position-absolute end-0"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span><span class="d-flex flex-column menu-depth-2" style="line-height:1;">ICOK<br><strong>KREATIV</strong></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-456" class="fs-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-456 nav-item"><a class=""><span class="d-flex align-items-end"><span>Menu 3</span></span></a>
+	<ul class="d-flex flex-wrap sub-menu sub-menu-1 list-unstyled flex-column">
+		<li id="menu-item-1195" class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1195 nav-item"><a href="https://www.inovaceok.cz/sluzba/envi" class="d-flex align-items-center position-relative"><span class="nav-item-image clipped-nav-item position-relative"><img width="1200" height="900" src="Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_0174-envi_-1200x900.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_0174-envi_-1200x900.jpg 1200w, Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_0174-envi_-300x225.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_0174-envi_-1024x768.jpg 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_0174-envi_-768x576.jpg 768w, Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_0174-envi_-1536x1152.jpg 1536w, Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_0174-envi_.jpg 2048w" sizes="(max-width: 1200px) 100vw, 1200px"><span class="position-absolute"><svg class="svg"><clipPath id="nav-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.75,0.333 H0.666 A0.167,0.167,0,0,0,0.833,0.167 V0.333 H0.75 M0.666,0 V0.167 A0.167,0.167,0,0,0,0.5,0 H0.167 a0.167,0.167,0,0,0,0,0.333 H0 c0,0.184,0.149,0.333,0.333,0.333 H0.167 v0.083 A0.083,0.083,0,0,0,0.083,0.667 H0 v0.083 a0.083,0.083,0,0,0,0.083,0.083 H0.167 V1 H1 V0.583 a0.083,0.083,0,0,0,-0.083,-0.083 H1 V0.333 H0.833 A0.167,0.167,0,0,0,1,0.167 V0 M0.083,0.833 A0.083,0.083,0,1,0,0.167,0.917 A0.083,0.083,0,0,0,0.083,0.833"></path></clipPath></svg></span></span><span class="sub-menu-arrow position-absolute end-0"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span><span class="d-flex flex-column menu-depth-2" style="line-height:1;">ICOK<br><strong>ENVI</strong></span></a></li>
+		<li id="menu-item-1274" class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1274 nav-item"><a href="https://www.inovaceok.cz/sluzba/smart" class="d-flex align-items-center position-relative"><span class="nav-item-image clipped-nav-item position-relative"><img width="1200" height="800" src="Pro%20m%C3%A9dia%20-%20ICOK_files/AJ_D0792__-1-1-1200x800.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/AJ_D0792__-1-1-1200x800.jpg 1200w, Pro%20m%C3%A9dia%20-%20ICOK_files/AJ_D0792__-1-1-300x200.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/AJ_D0792__-1-1-1024x683.jpg 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/AJ_D0792__-1-1-768x512.jpg 768w, Pro%20m%C3%A9dia%20-%20ICOK_files/AJ_D0792__-1-1-1536x1024.jpg 1536w, Pro%20m%C3%A9dia%20-%20ICOK_files/AJ_D0792__-1-1.jpg 2048w" sizes="(max-width: 1200px) 100vw, 1200px"><span class="position-absolute"><svg class="svg"><clipPath id="nav-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.75,0.333 H0.666 A0.167,0.167,0,0,0,0.833,0.167 V0.333 H0.75 M0.666,0 V0.167 A0.167,0.167,0,0,0,0.5,0 H0.167 a0.167,0.167,0,0,0,0,0.333 H0 c0,0.184,0.149,0.333,0.333,0.333 H0.167 v0.083 A0.083,0.083,0,0,0,0.083,0.667 H0 v0.083 a0.083,0.083,0,0,0,0.083,0.083 H0.167 V1 H1 V0.583 a0.083,0.083,0,0,0,-0.083,-0.083 H1 V0.333 H0.833 A0.167,0.167,0,0,0,1,0.167 V0 M0.083,0.833 A0.083,0.083,0,1,0,0.167,0.917 A0.083,0.083,0,0,0,0.083,0.833"></path></clipPath></svg></span></span><span class="sub-menu-arrow position-absolute end-0"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span><span class="d-flex flex-column menu-depth-2" style="line-height:1;">ICOK<br><strong>SMART</strong></span></a></li>
+	</ul>
+</li>
+	<li id="menu-item-2738" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2738 nav-item"><a class=""><span class="d-flex align-items-end"><span>Menu 4</span></span></a>
+	<ul class="d-flex flex-wrap sub-menu sub-menu-1 list-unstyled flex-column">
+		<li id="menu-item-1229" class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1229 nav-item"><a href="https://www.inovaceok.cz/sluzba/start" class="d-flex align-items-center position-relative"><span class="nav-item-image clipped-nav-item position-relative"><img width="1200" height="898" src="Pro%20m%C3%A9dia%20-%20ICOK_files/image-1-1-1200x898.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/image-1-1-1200x898.png 1200w, Pro%20m%C3%A9dia%20-%20ICOK_files/image-1-1-300x224.png 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/image-1-1-1024x766.png 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/image-1-1-768x575.png 768w, Pro%20m%C3%A9dia%20-%20ICOK_files/image-1-1.png 1263w" sizes="(max-width: 1200px) 100vw, 1200px"><span class="position-absolute"><svg class="svg"><clipPath id="nav-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.75,0.333 H0.666 A0.167,0.167,0,0,0,0.833,0.167 V0.333 H0.75 M0.666,0 V0.167 A0.167,0.167,0,0,0,0.5,0 H0.167 a0.167,0.167,0,0,0,0,0.333 H0 c0,0.184,0.149,0.333,0.333,0.333 H0.167 v0.083 A0.083,0.083,0,0,0,0.083,0.667 H0 v0.083 a0.083,0.083,0,0,0,0.083,0.083 H0.167 V1 H1 V0.583 a0.083,0.083,0,0,0,-0.083,-0.083 H1 V0.333 H0.833 A0.167,0.167,0,0,0,1,0.167 V0 M0.083,0.833 A0.083,0.083,0,1,0,0.167,0.917 A0.083,0.083,0,0,0,0.083,0.833"></path></clipPath></svg></span></span><span class="sub-menu-arrow position-absolute end-0"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span><span class="d-flex flex-column menu-depth-2" style="line-height:1;">ICOK<br><strong>START</strong></span></a></li>
+		<li id="menu-item-1230" class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1230 nav-item"><a href="https://www.inovaceok.cz/sluzba/voucher" class="d-flex align-items-center position-relative"><span class="nav-item-image clipped-nav-item position-relative"><img width="1080" height="1080" src="Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-1.jpg 1080w, Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-1-300x300.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-1-1024x1024.jpg 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-1-150x150.jpg 150w, Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-1-768x768.jpg 768w" sizes="(max-width: 1080px) 100vw, 1080px"><span class="position-absolute"><svg class="svg"><clipPath id="nav-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.75,0.333 H0.666 A0.167,0.167,0,0,0,0.833,0.167 V0.333 H0.75 M0.666,0 V0.167 A0.167,0.167,0,0,0,0.5,0 H0.167 a0.167,0.167,0,0,0,0,0.333 H0 c0,0.184,0.149,0.333,0.333,0.333 H0.167 v0.083 A0.083,0.083,0,0,0,0.083,0.667 H0 v0.083 a0.083,0.083,0,0,0,0.083,0.083 H0.167 V1 H1 V0.583 a0.083,0.083,0,0,0,-0.083,-0.083 H1 V0.333 H0.833 A0.167,0.167,0,0,0,1,0.167 V0 M0.083,0.833 A0.083,0.083,0,1,0,0.167,0.917 A0.083,0.083,0,0,0,0.083,0.833"></path></clipPath></svg></span></span><span class="sub-menu-arrow position-absolute end-0"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span><span class="d-flex flex-column menu-depth-2" style="line-height:1;">ICOK<br><strong>VOUCHER</strong></span></a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-740" class="object-post-story menu-item menu-item-type-post_type menu-item-object-page menu-item-740 nav-item"><a href="https://www.inovaceok.cz/vase-pribehy" class=""><span class="d-flex align-items-end"><span>Vaše příběhy</span></span></a></li>
+<li id="menu-item-449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-449 nav-item"><a href="https://www.inovaceok.cz/akce" class=""><span class="d-flex align-items-end"><span>Akce</span></span></a></li>
+<li id="menu-item-112" class="text-nowrap menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-112 nav-item"><a href="https://www.inovaceok.cz/o-nas" class=""><span class="d-flex align-items-end"><span>O nás</span><span class="sub-menu-indicator ms-2"><svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L5 6L1 11" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span></span></a>
+<ul class="d-flex flex-wrap sub-menu sub-menu-0 list-unstyled position-absolute">
+	<li id="menu-item-2619" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2619 nav-item"><a href="https://www.inovaceok.cz/o-nas" class=""><span class="d-flex align-items-end"><span>O nás</span></span></a></li>
+	<li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113 nav-item"><a href="https://www.inovaceok.cz/o-nas/ekosystem" class=""><span class="d-flex align-items-end"><span>Ekosystém</span></span></a></li>
+	<li id="menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-114 nav-item"><a href="https://www.inovaceok.cz/o-nas/nas-tym" class=""><span class="d-flex align-items-end"><span>Náš tým</span></span></a></li>
+	<li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115 nav-item"><a href="https://www.inovaceok.cz/o-nas/nase-projekty" class=""><span class="d-flex align-items-end"><span>Naše projekty</span></span></a></li>
+	<li id="menu-item-616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-616 nav-item"><a href="https://www.inovaceok.cz/aktuality" class=""><span class="d-flex align-items-end"><span>Aktuality</span></span></a></li>
+	<li id="menu-item-1166" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1160 current_page_item menu-item-1166 nav-item active "><a href="https://www.inovaceok.cz/pro-media" aria-current="page" class=""><span class="d-flex align-items-end"><span>Pro média</span></span></a></li>
+</ul>
+</li>
+<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110 nav-item"><a href="https://www.inovaceok.cz/kontakty" class=""><span class="d-flex align-items-end"><span>Kontakty</span></span></a></li>
+</ul>                </div>
+            </div>
+            <div class="d-flex align-items-center" bis_skin_checked="1">
+<!--                <a href="#" class="btn btn-outline-dark d-none d-xl-inline-block" target="_blank">--><!--</a>-->
+                <div class="d-inline-block d-xl-none" bis_skin_checked="1">
+    <button class="responsive__menu_button">
+        <svg width="45" height="45" viewBox="0 0 100 100">
+            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
+            <path class="line line2" d="M 20,50 H 80"></path>
+            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
+        </svg>
+    </button>
+</div>                <ul class="d-none d-xl-flex align-items-center list-unstyled list-language-switcher ms-5">
+                    <li class=""><a href="https://www.inovaceok.cz/cz/o-nas">CZ</a></li>
+                    <li><svg width="33" height="56" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="-0.5" x2="63.5085" y2="-0.5" transform="matrix(-0.5 0.866025 0.866025 0.5 32.7539 1)" stroke="black"></line>
+<line y1="-0.5" x2="63.5085" y2="-0.5" transform="matrix(-0.5 0.866025 0.866025 0.5 32.7539 1)" stroke="black" stroke-opacity="0.2"></line>
+<line y1="-0.5" x2="63.5085" y2="-0.5" transform="matrix(-0.5 0.866025 0.866025 0.5 32.7539 1)" stroke="black" stroke-opacity="0.2"></line>
+</svg>
+</li>
+                    <li class=""><a href="https://www.inovaceok.cz/en/o-nas">EN</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="responsive__menu" bis_skin_checked="1">
+    <div class="responsive__menu_inner" bis_skin_checked="1">
+        <div class="responsive__menu_logo mb-5" bis_skin_checked="1">
+            <a href="https://www.inovaceok.cz/">
+                <!--?xml version="1.0" encoding="UTF-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="215" height="55" viewBox="0 0 215 55" fill="none">
+  <g clip-path="url(#clip0_72_2178)">
+    <path d="M121.673 3.01367H120.891V11.5817H121.673V3.01367Z" fill="black"></path>
+    <path d="M124.27 11.5729V3.01367H125.051L129.611 10.2325V3.01367H130.392V11.5729H129.611L125.051 4.36283V11.5729H124.27Z" fill="black"></path>
+    <path d="M136.802 10.9771C137.288 10.9771 137.731 10.8808 138.148 10.6968C138.565 10.5128 138.929 10.25 139.242 9.90833C139.555 9.57543 139.798 9.18119 139.98 8.73439C140.154 8.2876 140.241 7.80575 140.241 7.28887C140.241 6.77198 140.154 6.29014 139.98 5.84335C139.806 5.39655 139.563 5.00231 139.242 4.6694C138.929 4.3365 138.565 4.07367 138.148 3.8897C137.731 3.70572 137.288 3.60935 136.802 3.60935C136.315 3.60935 135.864 3.70572 135.447 3.8897C135.03 4.08243 134.665 4.3365 134.352 4.6694C134.04 5.00231 133.797 5.39655 133.623 5.84335C133.449 6.29014 133.362 6.77198 133.362 7.28887C133.362 7.80575 133.449 8.2876 133.623 8.73439C133.797 9.18119 134.049 9.57543 134.352 9.90833C134.665 10.2412 135.03 10.5041 135.447 10.6968C135.864 10.8808 136.315 10.9771 136.802 10.9771ZM136.802 11.7393C136.211 11.7393 135.655 11.6254 135.134 11.3977C134.613 11.1699 134.161 10.8545 133.771 10.4427C133.38 10.0397 133.076 9.56667 132.85 9.0235C132.633 8.48909 132.52 7.91088 132.52 7.28887C132.52 6.66686 132.633 6.08865 132.85 5.55424C133.067 5.01983 133.38 4.54675 133.771 4.14376C134.161 3.74076 134.613 3.41662 135.134 3.18884C135.655 2.96106 136.211 2.84717 136.802 2.84717C137.392 2.84717 137.948 2.96106 138.469 3.18884C138.99 3.41662 139.442 3.732 139.833 4.14376C140.223 4.54675 140.527 5.01983 140.753 5.55424C140.97 6.08865 141.083 6.66686 141.083 7.28887C141.083 7.91088 140.97 8.48033 140.753 9.0235C140.536 9.5579 140.223 10.031 139.833 10.4427C139.442 10.8457 138.99 11.1699 138.469 11.3977C137.948 11.6254 137.392 11.7393 136.802 11.7393Z" fill="black"></path>
+    <path d="M145.391 11.5729L141.83 3.01367H142.716L145.703 10.3902L148.682 3.01367H149.568L146.007 11.5729H145.391Z" fill="black"></path>
+    <path d="M151.635 8.14744H154.753L153.198 4.04741L151.635 8.14744ZM149.49 11.5729L152.834 3.00488H153.554L156.898 11.5729H156.056L155.022 8.83954H151.375L150.332 11.5729H149.49Z" fill="black"></path>
+    <path d="M162.178 1.83976L160.294 0.438038L160.606 0L162.178 1.16518L163.75 0L164.072 0.438038L162.178 1.83976ZM162.178 11.7394C161.544 11.7394 160.954 11.6255 160.407 11.4065C159.86 11.1787 159.382 10.8633 158.982 10.4603C158.574 10.0573 158.262 9.58426 158.036 9.04986C157.81 8.50669 157.697 7.92848 157.697 7.29771C157.697 6.66693 157.81 6.08872 158.036 5.54556C158.262 5.00239 158.583 4.53807 158.982 4.13507C159.391 3.73208 159.86 3.41669 160.407 3.18891C160.954 2.96113 161.544 2.84724 162.178 2.84724C162.708 2.84724 163.212 2.92609 163.672 3.08378C164.141 3.24148 164.549 3.4605 164.905 3.73208L164.532 4.38914C164.228 4.14384 163.881 3.9511 163.481 3.81969C163.082 3.68828 162.665 3.62695 162.213 3.62695C161.675 3.62695 161.18 3.72332 160.737 3.9073C160.294 4.09127 159.903 4.35409 159.573 4.687C159.243 5.01991 158.991 5.40538 158.809 5.85218C158.626 6.29898 158.539 6.78082 158.539 7.28895C158.539 7.79707 158.626 8.27891 158.809 8.72571C158.991 9.17251 159.243 9.55798 159.573 9.89089C159.903 10.2238 160.294 10.4779 160.737 10.6706C161.188 10.8546 161.675 10.9509 162.213 10.9509C162.656 10.9509 163.082 10.8809 163.481 10.7494C163.881 10.618 164.228 10.4341 164.532 10.18L164.905 10.8371C164.549 11.1086 164.141 11.3189 163.681 11.4853C163.22 11.643 162.717 11.7219 162.178 11.7219" fill="black"></path>
+    <path d="M166.634 11.5729V3.01367H167.415L171.975 10.2325V3.01367H172.756V11.5729H171.975L167.415 4.36283V11.5729H166.634Z" fill="black"></path>
+    <path d="M175.353 3.01393H176.135V11.5819H175.353V3.01393ZM175.683 2.32183L175.301 2.03272L176.282 0.0703125L176.873 0.490829L175.692 2.32183H175.683Z" fill="black"></path>
+    <path d="M124.599 26.1597C123.965 26.1597 123.375 26.0459 122.828 25.8268C122.281 25.5991 121.803 25.2837 121.403 24.8807C120.995 24.4777 120.683 24.0046 120.457 23.4702C120.231 22.927 120.118 22.3488 120.118 21.718C120.118 21.0873 120.231 20.5091 120.457 19.9659C120.683 19.4227 121.004 18.9584 121.403 18.5554C121.812 18.1524 122.281 17.837 122.828 17.6092C123.375 17.3815 123.965 17.2676 124.599 17.2676C125.129 17.2676 125.633 17.3464 126.093 17.5041C126.562 17.6618 126.97 17.8808 127.326 18.1524L126.953 18.8095C126.649 18.5642 126.302 18.3714 125.902 18.24C125.503 18.1086 125.086 18.0473 124.634 18.0473C124.096 18.0473 123.601 18.1437 123.158 18.3276C122.706 18.5116 122.324 18.7744 121.994 19.1073C121.664 19.4402 121.412 19.8257 121.23 20.2725C121.047 20.7193 120.961 21.2012 120.961 21.7093C120.961 22.2174 121.047 22.6992 121.23 23.146C121.412 23.5928 121.664 23.9783 121.994 24.3112C122.324 24.6441 122.715 24.8982 123.158 25.0909C123.609 25.2749 124.096 25.3713 124.634 25.3713C125.077 25.3713 125.503 25.3012 125.902 25.1698C126.302 25.0384 126.649 24.8544 126.953 24.6003L127.326 25.2574C126.97 25.529 126.562 25.7392 126.102 25.9057C125.642 26.0634 125.138 26.1422 124.599 26.1422" fill="black"></path>
+    <path d="M129.046 25.9933V17.4341H133.328V18.1262H129.828V21.3501H133.197V22.051H129.828V25.3012H133.328V25.9933H129.046Z" fill="black"></path>
+    <path d="M135.334 25.9933V17.4341H136.115L140.675 24.6529V17.4341H141.456V25.9933H140.675L136.115 18.7832V25.9933H135.334Z" fill="black"></path>
+    <path d="M145.582 25.9933V18.1437H142.994V17.4341H148.969V18.1437H146.372V25.9933H145.582Z" fill="black"></path>
+    <path d="M151.331 21.7005H152.564C152.998 21.7005 153.372 21.6305 153.684 21.4728C153.997 21.3238 154.24 21.1136 154.405 20.8332C154.57 20.5529 154.657 20.2375 154.657 19.8608C154.657 19.3001 154.475 18.8621 154.101 18.5467C153.728 18.2313 153.216 18.0648 152.564 18.0648H151.331V21.6918V21.7005ZM150.549 25.9933V17.4253H152.755C153.311 17.4253 153.789 17.5217 154.197 17.7144C154.605 17.9071 154.918 18.1875 155.135 18.5467C155.361 18.9059 155.465 19.3351 155.465 19.8433C155.465 20.2988 155.369 20.7106 155.187 21.061C154.996 21.4114 154.735 21.7005 154.397 21.9108C154.058 22.1298 153.65 22.2612 153.181 22.305L156.003 25.9845H155.013L152.304 22.3751H151.34V25.9845H150.558L150.549 25.9933Z" fill="black"></path>
+    <path d="M160.415 26.1598C159.434 26.1598 158.704 25.8882 158.209 25.3538C157.714 24.8106 157.471 24.0046 157.471 22.9271V17.4341H158.253V22.7606C158.253 23.6455 158.435 24.3025 158.791 24.7405C159.147 25.1786 159.694 25.3888 160.415 25.3888C161.136 25.3888 161.675 25.1698 162.031 24.7405C162.387 24.3025 162.569 23.6455 162.569 22.7606V17.4341H163.359V22.9271C163.359 24.0046 163.116 24.8106 162.621 25.3538C162.126 25.897 161.397 26.1598 160.415 26.1598Z" fill="black"></path>
+    <path d="M165.348 25.9933L166.442 17.4341H167.276L169.769 24.1273L172.27 17.4341H173.104L174.198 25.9933H173.416L172.478 18.8971L170.055 25.4677H169.491L167.068 18.8971L166.13 25.9933H165.348Z" fill="black"></path>
+    <path d="M124.66 39.8175C125.147 39.8175 125.589 39.7211 126.006 39.5371C126.423 39.3532 126.788 39.0903 127.101 38.7487C127.413 38.4158 127.656 38.0215 127.839 37.5747C128.013 37.1279 128.099 36.6461 128.099 36.1292C128.099 35.6123 128.013 35.1305 127.839 34.6837C127.665 34.2369 127.422 33.8426 127.101 33.5097C126.788 33.1768 126.423 32.914 126.006 32.73C125.589 32.5461 125.147 32.4497 124.66 32.4497C124.174 32.4497 123.722 32.5461 123.305 32.73C122.889 32.9228 122.524 33.1768 122.211 33.5097C121.898 33.8426 121.655 34.2369 121.482 34.6837C121.308 35.1305 121.221 35.6123 121.221 36.1292C121.221 36.6461 121.308 37.1279 121.482 37.5747C121.655 38.0215 121.907 38.4158 122.211 38.7487C122.524 39.0816 122.889 39.3444 123.305 39.5371C123.722 39.7211 124.174 39.8175 124.66 39.8175ZM124.66 40.5797C124.07 40.5797 123.514 40.4658 122.993 40.238C122.472 40.0102 122.02 39.6948 121.629 39.2831C121.238 38.8801 120.934 38.407 120.709 37.8638C120.492 37.3294 120.379 36.7512 120.379 36.1292C120.379 35.5072 120.492 34.929 120.709 34.3946C120.926 33.8602 121.238 33.3871 121.629 32.9841C122.02 32.5811 122.472 32.257 122.993 32.0292C123.514 31.8014 124.07 31.6875 124.66 31.6875C125.251 31.6875 125.807 31.8014 126.328 32.0292C126.849 32.257 127.3 32.5723 127.691 32.9841C128.082 33.3871 128.386 33.8602 128.612 34.3946C128.829 34.929 128.942 35.5072 128.942 36.1292C128.942 36.7512 128.829 37.3207 128.612 37.8638C128.395 38.3982 128.082 38.8713 127.691 39.2831C127.3 39.6861 126.849 40.0102 126.328 40.238C125.807 40.4658 125.251 40.5797 124.66 40.5797Z" fill="black"></path>
+    <path d="M131.061 40.4132V31.8452H131.843V39.7211H135.403V40.4132H131.061Z" fill="black"></path>
+    <path d="M140.171 39.8175C140.658 39.8175 141.1 39.7211 141.517 39.5371C141.934 39.3532 142.299 39.0903 142.612 38.7487C142.924 38.4158 143.167 38.0215 143.35 37.5747C143.524 37.1279 143.61 36.6461 143.61 36.1292C143.61 35.6123 143.524 35.1305 143.35 34.6837C143.176 34.2369 142.933 33.8426 142.612 33.5097C142.299 33.1768 141.934 32.914 141.517 32.73C141.1 32.5461 140.658 32.4497 140.171 32.4497C139.685 32.4497 139.233 32.5461 138.816 32.73C138.4 32.9228 138.035 33.1768 137.722 33.5097C137.409 33.8426 137.166 34.2369 136.993 34.6837C136.819 35.1305 136.732 35.6123 136.732 36.1292C136.732 36.6461 136.819 37.1279 136.993 37.5747C137.166 38.0215 137.418 38.4158 137.722 38.7487C138.035 39.0816 138.4 39.3444 138.816 39.5371C139.233 39.7211 139.685 39.8175 140.171 39.8175ZM140.171 40.5797C139.581 40.5797 139.025 40.4658 138.504 40.238C137.983 40.0102 137.531 39.6948 137.14 39.2831C136.749 38.8801 136.445 38.407 136.22 37.8638C136.003 37.3294 135.89 36.7512 135.89 36.1292C135.89 35.5072 136.003 34.929 136.22 34.3946C136.437 33.8602 136.749 33.3871 137.14 32.9841C137.531 32.5811 137.983 32.257 138.504 32.0292C139.025 31.8014 139.581 31.6875 140.171 31.6875C140.762 31.6875 141.318 31.8014 141.839 32.0292C142.36 32.257 142.811 32.5723 143.202 32.9841C143.593 33.3871 143.897 33.8602 144.123 34.3946C144.34 34.929 144.453 35.5072 144.453 36.1292C144.453 36.7512 144.34 37.3207 144.123 37.8638C143.906 38.3982 143.593 38.8713 143.202 39.2831C142.811 39.6861 142.36 40.0102 141.839 40.238C141.318 40.4658 140.762 40.5797 140.171 40.5797Z" fill="black"></path>
+    <path d="M146.051 40.4132L147.145 31.8452H147.979L150.471 38.5472L152.972 31.8452H153.798L154.901 40.4132H154.119L153.181 33.317L150.758 39.8876H150.193L147.77 33.317L146.832 40.4132H146.051Z" fill="black"></path>
+    <path d="M160.78 39.8175C161.266 39.8175 161.709 39.7211 162.126 39.5371C162.543 39.3532 162.908 39.0903 163.221 38.7487C163.533 38.4158 163.776 38.0215 163.95 37.5747C164.124 37.1279 164.211 36.6461 164.211 36.1292C164.211 35.6123 164.124 35.1305 163.95 34.6837C163.776 34.2369 163.533 33.8426 163.221 33.5097C162.908 33.1768 162.543 32.914 162.126 32.73C161.709 32.5461 161.266 32.4497 160.78 32.4497C160.294 32.4497 159.842 32.5461 159.425 32.73C159.008 32.9228 158.644 33.1768 158.331 33.5097C158.018 33.8426 157.775 34.2369 157.593 34.6837C157.419 35.1305 157.332 35.6123 157.332 36.1292C157.332 36.6461 157.419 37.1279 157.593 37.5747C157.767 38.0215 158.018 38.4158 158.331 38.7487C158.644 39.0816 159.008 39.3444 159.425 39.5371C159.842 39.7211 160.294 39.8175 160.78 39.8175ZM160.78 40.5797C160.19 40.5797 159.634 40.4658 159.113 40.238C158.592 40.0102 158.14 39.6948 157.749 39.2831C157.358 38.8801 157.054 38.407 156.829 37.8638C156.611 37.3294 156.499 36.7512 156.499 36.1292C156.499 35.5072 156.611 34.929 156.829 34.3946C157.046 33.8602 157.358 33.3871 157.749 32.9841C158.14 32.5811 158.592 32.257 159.113 32.0292C159.634 31.8014 160.19 31.6875 160.78 31.6875C161.371 31.6875 161.926 31.8014 162.448 32.0292C162.969 32.257 163.42 32.5723 163.811 32.9841C164.202 33.3871 164.506 33.8602 164.732 34.3946C164.949 34.929 165.062 35.5072 165.062 36.1292C165.062 36.7512 164.949 37.3207 164.732 37.8638C164.515 38.3982 164.202 38.8713 163.811 39.2831C163.42 39.6861 162.969 40.0102 162.448 40.238C161.926 40.4658 161.371 40.5797 160.78 40.5797Z" fill="black"></path>
+    <path d="M170.021 40.5797C169.039 40.5797 168.31 40.3081 167.815 39.7737C167.32 39.2306 167.076 38.4246 167.076 37.347V31.854H167.858V37.1805C167.858 38.0654 168.04 38.7224 168.396 39.1605C168.753 39.5897 169.3 39.8088 170.021 39.8088C170.741 39.8088 171.28 39.5897 171.636 39.1605C171.992 38.7224 172.174 38.0654 172.174 37.1805V31.854H172.965V37.347C172.965 38.4246 172.721 39.2306 172.226 39.7737C171.731 40.3169 171.002 40.5797 170.021 40.5797Z" fill="black"></path>
+    <path d="M179.339 40.5797C178.705 40.5797 178.115 40.4658 177.568 40.2468C177.02 40.019 176.543 39.7036 176.143 39.3006C175.735 38.8976 175.422 38.4245 175.197 37.8901C174.971 37.3469 174.858 36.7687 174.858 36.138C174.858 35.5072 174.971 34.929 175.197 34.3858C175.422 33.8426 175.744 33.3783 176.143 32.9753C176.551 32.5723 177.02 32.257 177.568 32.0292C178.115 31.8014 178.705 31.6875 179.339 31.6875C179.869 31.6875 180.373 31.7663 180.833 31.924C181.302 32.0817 181.71 32.3008 182.066 32.5723L181.693 33.2294C181.389 32.9841 181.041 32.7914 180.642 32.6599C180.242 32.5285 179.826 32.4672 179.374 32.4672C178.836 32.4672 178.34 32.5636 177.898 32.7476C177.455 32.9315 177.064 33.1944 176.734 33.5273C176.404 33.8602 176.152 34.2456 175.97 34.6924C175.787 35.1392 175.7 35.6211 175.7 36.1292C175.7 36.6373 175.787 37.1192 175.97 37.566C176.152 38.0128 176.404 38.3982 176.734 38.7311C177.064 39.0641 177.455 39.3181 177.898 39.5109C178.349 39.6948 178.836 39.7912 179.374 39.7912C179.817 39.7912 180.242 39.7211 180.642 39.5897C181.041 39.4583 181.389 39.2743 181.693 39.0203L182.066 39.6773C181.71 39.9489 181.302 40.1591 180.842 40.3256C180.381 40.4833 179.878 40.5621 179.339 40.5621" fill="black"></path>
+    <path d="M183.786 40.4132V31.8452H184.568V35.77L188.38 31.8452H189.37L185.254 36.0854L189.796 40.4132H188.701L184.568 36.5235V40.4132H183.786Z" fill="black"></path>
+    <path d="M193.591 31.1621L193.2 30.873L194.181 28.9019L194.772 29.3311L193.591 31.1621ZM191.446 40.4135V31.8455H195.719V32.5376H192.227V35.7615H195.597V36.4536H192.227V39.7039H195.719V40.396H191.446V40.4135Z" fill="black"></path>
+    <path d="M197.725 40.4132V31.8452H198.506V35.77H203.144V31.8452H203.926V40.4132H203.144V36.4709H198.506V40.4132H197.725Z" fill="black"></path>
+    <path d="M210.326 39.8175C210.813 39.8175 211.255 39.7211 211.672 39.5371C212.089 39.3532 212.454 39.0903 212.767 38.7487C213.079 38.4158 213.322 38.0215 213.496 37.5747C213.67 37.1279 213.757 36.6461 213.757 36.1292C213.757 35.6123 213.67 35.1305 213.496 34.6837C213.322 34.2369 213.079 33.8426 212.767 33.5097C212.454 33.1768 212.089 32.914 211.672 32.73C211.255 32.5461 210.813 32.4497 210.326 32.4497C209.84 32.4497 209.388 32.5461 208.971 32.73C208.555 32.9228 208.19 33.1768 207.877 33.5097C207.565 33.8426 207.321 34.2369 207.139 34.6837C206.965 35.1305 206.878 35.6123 206.878 36.1292C206.878 36.6461 206.965 37.1279 207.139 37.5747C207.313 38.0215 207.565 38.4158 207.877 38.7487C208.19 39.0816 208.555 39.3444 208.971 39.5371C209.388 39.7211 209.84 39.8175 210.326 39.8175ZM210.326 40.5797C209.736 40.5797 209.18 40.4658 208.659 40.238C208.138 40.0102 207.686 39.6948 207.295 39.2831C206.904 38.8801 206.601 38.407 206.375 37.8638C206.158 37.3294 206.045 36.7512 206.045 36.1292C206.045 35.5072 206.158 34.929 206.375 34.3946C206.592 33.8602 206.904 33.3871 207.295 32.9841C207.686 32.5811 208.138 32.257 208.659 32.0292C209.18 31.8014 209.736 31.6875 210.326 31.6875C210.917 31.6875 211.473 31.8014 211.994 32.0292C212.515 32.257 212.966 32.5723 213.357 32.9841C213.748 33.3871 214.052 33.8602 214.278 34.3946C214.495 34.929 214.608 35.5072 214.608 36.1292C214.608 36.7512 214.495 37.3207 214.278 37.8638C214.061 38.3982 213.748 38.8713 213.357 39.2831C212.966 39.6861 212.515 40.0102 211.994 40.238C211.473 40.4658 210.917 40.5797 210.326 40.5797Z" fill="black"></path>
+    <path d="M120.891 54.8336V46.2656H121.681V50.1904L125.485 46.2656H126.475L122.359 50.5058L126.901 54.8336H125.807L121.681 50.9439V54.8336H120.891Z" fill="black"></path>
+    <path d="M129.333 50.5409H130.566C131 50.5409 131.374 50.4708 131.678 50.3131C131.99 50.1642 132.233 49.9539 132.398 49.6736C132.572 49.402 132.65 49.0778 132.65 48.7011C132.65 48.1404 132.468 47.7024 132.094 47.3782C131.721 47.0629 131.209 46.8964 130.557 46.8964H129.324V50.5233L129.333 50.5409ZM128.551 54.8336V46.2656H130.757C131.313 46.2656 131.79 46.362 132.199 46.5547C132.607 46.7475 132.919 47.0278 133.137 47.387C133.362 47.7462 133.467 48.1842 133.467 48.6836C133.467 49.1391 133.371 49.5509 133.189 49.9013C133.006 50.2518 132.737 50.5409 132.398 50.7511C132.06 50.9701 131.651 51.1016 131.182 51.1454L134.005 54.8249H133.015L130.305 51.2154H129.341V54.8249H128.56L128.551 54.8336Z" fill="black"></path>
+    <path d="M137.305 51.4082H140.423L138.869 47.3082L137.305 51.4082ZM135.16 54.8336L138.504 46.2656H139.233L142.577 54.8336H141.734L140.701 52.1003H137.053L136.011 54.8336H135.169H135.16Z" fill="black"></path>
+    <path d="M145.747 55.0001C144.991 55.0001 144.34 54.7373 143.793 54.2029L144.105 53.5458C144.557 54.0101 145.078 54.2467 145.677 54.2467C146.277 54.2467 146.702 54.0627 147.023 53.7035C147.345 53.3443 147.501 52.8362 147.501 52.1791V46.2656H148.274V52.4244C148.274 53.2392 148.048 53.87 147.605 54.3168C147.162 54.7723 146.537 55.0001 145.747 55.0001Z" fill="black"></path>
+    <path d="M150.819 54.8336V46.2656H155.091V46.9665H151.6V50.1904H154.97V50.8825H151.6V54.1328H155.091V54.8336H150.819Z" fill="black"></path>
+    <path d="M2.90938 2.53174H0V24.1533H2.90938V2.53174Z" fill="black"></path>
+    <path d="M43.9012 2.50537C42.2859 2.50537 40.7574 2.79448 39.3591 3.37269C37.9609 3.9509 36.719 4.75688 35.6595 5.77313C34.5999 6.78938 33.7662 7.9896 33.1756 9.34752C32.5851 10.6967 32.2898 12.1772 32.2898 13.7367C32.2898 15.2961 32.5851 16.7854 33.1756 18.1258C33.7662 19.4749 34.5999 20.6752 35.6595 21.6914C36.719 22.7077 37.9696 23.5224 39.3678 24.0919C40.7748 24.6701 42.2946 24.9592 43.8926 24.9592C45.2474 24.9592 46.5327 24.7577 47.7138 24.3722C48.7907 24.013 49.7461 23.5487 50.5364 22.9968L49.2771 20.5525C48.6431 21.0081 47.9136 21.376 47.0885 21.6389C46.1506 21.9455 45.1432 22.0944 44.101 22.0944C42.8678 22.0944 41.7127 21.8754 40.6619 21.4549C39.6197 21.0344 38.6904 20.4299 37.9175 19.6764C37.1445 18.923 36.5279 18.0294 36.1024 17.0132C35.6768 16.0057 35.4597 14.9018 35.4597 13.7279C35.4597 12.554 35.6768 11.4589 36.1024 10.4426C36.5279 9.43513 37.1445 8.53277 37.9175 7.77934C38.6904 7.02592 39.6197 6.43019 40.6619 6.00091C41.704 5.57163 42.8591 5.36138 44.0923 5.36138C45.1345 5.36138 46.1332 5.51907 47.0799 5.81694C47.8962 6.07976 48.6344 6.44771 49.2597 6.90327L50.519 4.45902C49.7113 3.88957 48.7473 3.41649 47.653 3.07482C46.4632 2.69811 45.1953 2.50537 43.8752 2.50537" fill="black"></path>
+    <path d="M78.1449 54.8774H82.1746L71.3535 43.76L80.9501 33.2471H77.4414L68.2183 42.954L68.2964 33.2471H65.3958V54.8774H68.3051V45.0741L78.1449 54.8774Z" fill="black"></path>
+    <path d="M40.2276 43.9876C40.2276 50.0325 35.3729 54.9298 29.3804 54.9298C23.388 54.9298 18.5332 50.0325 18.5332 43.9876C18.5332 37.9427 23.388 33.0454 29.3804 33.0454C35.3729 33.0454 40.2276 37.9427 40.2276 43.9876Z" fill="#EEB400"></path>
+    <path d="M109.966 54.9035H108.976L78.7356 2.51416H79.7257L109.966 54.9035Z" fill="black"></path>
+  </g>
+  <defs>
+    <clipPath id="clip0_72_2178">
+      <rect width="214.608" height="55" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg>
+            </a>
+        </div>
+        <div class="responsive__menu_nav" bis_skin_checked="1">
+            <ul id="menu-primarni-menu-1" class="list-unstyled"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-133"><a href="#" class=""><span>Komu pomáháme</span></a><svg id="Layer_2" height="512" viewBox="0 0 24 24" class="show-sub-menu" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2"><path d="m22 11h-17.586l5.293-5.293a1 1 0 1 0 -1.414-1.414l-7 7a1 1 0 0 0 0 1.414l7 7a1 1 0 0 0 1.414-1.414l-5.293-5.293h17.586a1 1 0 0 0 0-2z"></path></svg><div class="sub-menu-container" bis_skin_checked="1"><div class="d-inline-flex align-items-center justify-content-center close-sub-menu mb-5" bis_skin_checked="1"><svg id="Layer_2" height="512" viewBox="0 0 24 24" class="close-sub-menu" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2"><path d="m22 11h-17.586l5.293-5.293a1 1 0 1 0 -1.414-1.414l-7 7a1 1 0 0 0 0 1.414l7 7a1 1 0 0 0 1.414-1.414l-5.293-5.293h17.586a1 1 0 0 0 0-2z"></path></svg><span class="close-sub-menu ms-2">Vrátit zpět</span></div>
+<ul class="sub-menu sub-menu-0 list-unstyled">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="https://www.inovaceok.cz/studenti" class=""><span>Studenti, kreativci a zájemci o podnikání</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="https://www.inovaceok.cz/firmy" class=""><span>Firmy a startupy</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="https://www.inovaceok.cz/organizace-a-inovatori" class=""><span>Organizace a inovátoři</span></a></li>
+</ul>
+</div></li>
+<li class="remove-first-depth menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-111"><a href="https://www.inovaceok.cz/sluzby" class=""><span>Naše služby</span></a><svg id="Layer_2" height="512" viewBox="0 0 24 24" class="show-sub-menu" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2"><path d="m22 11h-17.586l5.293-5.293a1 1 0 1 0 -1.414-1.414l-7 7a1 1 0 0 0 0 1.414l7 7a1 1 0 0 0 1.414-1.414l-5.293-5.293h17.586a1 1 0 0 0 0-2z"></path></svg><div class="sub-menu-container" bis_skin_checked="1"><div class="d-inline-flex align-items-center justify-content-center close-sub-menu mb-5" bis_skin_checked="1"><svg id="Layer_2" height="512" viewBox="0 0 24 24" class="close-sub-menu" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2"><path d="m22 11h-17.586l5.293-5.293a1 1 0 1 0 -1.414-1.414l-7 7a1 1 0 0 0 0 1.414l7 7a1 1 0 0 0 1.414-1.414l-5.293-5.293h17.586a1 1 0 0 0 0-2z"></path></svg><span class="close-sub-menu ms-2">Vrátit zpět</span></div>
+<ul class="sub-menu sub-menu-0 list-unstyled">
+	<li class="fs-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-454"><a class=""><span>Menu 1</span></a>
+	<ul class="sub-menu sub-menu-1 list-unstyled">
+		<li class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-126"><a href="https://www.inovaceok.cz/sluzba/platinn" class="d-flex align-items-center position-relative"><span class="d-flex flex-column menu-depth-2">ICOK<br><strong>PLATINN</strong></span></a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1273"><a href="https://www.inovaceok.cz/sluzba/naslapnu-to" class="d-flex align-items-center position-relative"><span class="d-flex flex-column menu-depth-2">ICOK<br><strong>NašlápnuTO</strong></span></a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-455"><a class=""><span>Menu 2</span></a>
+	<ul class="sub-menu sub-menu-1 list-unstyled">
+		<li class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1271"><a href="https://www.inovaceok.cz/sluzba/digi" class="d-flex align-items-center position-relative"><span class="d-flex flex-column menu-depth-2">ICOK<br><strong>DIGI</strong></span></a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1272"><a href="https://www.inovaceok.cz/sluzba/kreativ" class="d-flex align-items-center position-relative"><span class="d-flex flex-column menu-depth-2">ICOK<br><strong>KREATIV</strong></span></a></li>
+	</ul>
+</li>
+	<li class="fs-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-456"><a class=""><span>Menu 3</span></a>
+	<ul class="sub-menu sub-menu-1 list-unstyled">
+		<li class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1195"><a href="https://www.inovaceok.cz/sluzba/envi" class="d-flex align-items-center position-relative"><span class="d-flex flex-column menu-depth-2">ICOK<br><strong>ENVI</strong></span></a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1274"><a href="https://www.inovaceok.cz/sluzba/smart" class="d-flex align-items-center position-relative"><span class="d-flex flex-column menu-depth-2">ICOK<br><strong>SMART</strong></span></a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2738"><a class=""><span>Menu 4</span></a>
+	<ul class="sub-menu sub-menu-1 list-unstyled">
+		<li class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1229"><a href="https://www.inovaceok.cz/sluzba/start" class="d-flex align-items-center position-relative"><span class="d-flex flex-column menu-depth-2">ICOK<br><strong>START</strong></span></a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-sluzba menu-item-1230"><a href="https://www.inovaceok.cz/sluzba/voucher" class="d-flex align-items-center position-relative"><span class="d-flex flex-column menu-depth-2">ICOK<br><strong>VOUCHER</strong></span></a></li>
+	</ul>
+</li>
+</ul>
+</div></li>
+<li class="object-post-story menu-item menu-item-type-post_type menu-item-object-page menu-item-740"><a href="https://www.inovaceok.cz/vase-pribehy" class=""><span>Vaše příběhy</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-449"><a href="https://www.inovaceok.cz/akce" class=""><span>Akce</span></a></li>
+<li class="text-nowrap menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-112"><a href="https://www.inovaceok.cz/o-nas" class=""><span>O nás</span></a><svg id="Layer_2" height="512" viewBox="0 0 24 24" class="show-sub-menu" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2"><path d="m22 11h-17.586l5.293-5.293a1 1 0 1 0 -1.414-1.414l-7 7a1 1 0 0 0 0 1.414l7 7a1 1 0 0 0 1.414-1.414l-5.293-5.293h17.586a1 1 0 0 0 0-2z"></path></svg><div class="sub-menu-container" bis_skin_checked="1"><div class="d-inline-flex align-items-center justify-content-center close-sub-menu mb-5" bis_skin_checked="1"><svg id="Layer_2" height="512" viewBox="0 0 24 24" class="close-sub-menu" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2"><path d="m22 11h-17.586l5.293-5.293a1 1 0 1 0 -1.414-1.414l-7 7a1 1 0 0 0 0 1.414l7 7a1 1 0 0 0 1.414-1.414l-5.293-5.293h17.586a1 1 0 0 0 0-2z"></path></svg><span class="close-sub-menu ms-2">Vrátit zpět</span></div>
+<ul class="sub-menu sub-menu-0 list-unstyled">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2619"><a href="https://www.inovaceok.cz/o-nas" class=""><span>O nás</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="https://www.inovaceok.cz/o-nas/ekosystem" class=""><span>Ekosystém</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-114"><a href="https://www.inovaceok.cz/o-nas/nas-tym" class=""><span>Náš tým</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a href="https://www.inovaceok.cz/o-nas/nase-projekty" class=""><span>Naše projekty</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-616"><a href="https://www.inovaceok.cz/aktuality" class=""><span>Aktuality</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1160 current_page_item menu-item-1166 active "><a href="https://www.inovaceok.cz/pro-media" aria-current="page" class=""><span>Pro média</span></a></li>
+</ul>
+</div></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="https://www.inovaceok.cz/kontakty" class=""><span>Kontakty</span></a></li>
+</ul>        </div>
+                    <div class="responsive__menu_socials" bis_skin_checked="1">
+                <ul class="list-unstyled d-flex align-items-center mb-0">
+                                            <li>
+                            <a href="https://www.facebook.com/inovacnicentrumolomouckehokraje/" class="social-link-facebook" target="_blank">
+                                <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"></path></svg>                            </a>
+                        </li>
+                                                <li>
+                            <a href="https://www.instagram.com/icok_cz/" class="social-link-instagram" target="_blank">
+                                <svg height="511pt" viewBox="0 0 511 511.9" width="511pt" xmlns="http://www.w3.org/2000/svg"><path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"></path><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"></path><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"></path></svg>                            </a>
+                        </li>
+                                                <li>
+                            <a href="https://www.linkedin.com/company/icok" class="social-link-linkedin" target="_blank">
+                                <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"></path><path d="m.396 7.977h4.976v16.023h-4.976z"></path><path d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"></path></svg>                            </a>
+                        </li>
+                                        </ul>
+            </div>
+                </div>
+</div>
+<div class="responsive__menu_overlay" bis_skin_checked="1"></div>
+    <main id="page">
+                    <figure class="wp-block-image size-full position-absolute top-0 left-0">
+                <img decoding="async" loading="lazy" width="1423" height="2560" src="Pro%20m%C3%A9dia%20-%20ICOK_files/Podklad-scaled.jpeg" alt="" class="wp-image-619" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/Podklad-scaled.jpeg 1423w, Pro%20m%C3%A9dia%20-%20ICOK_files/Podklad-167x300.jpeg 167w, Pro%20m%C3%A9dia%20-%20ICOK_files/Podklad-569x1024.jpeg 569w, Pro%20m%C3%A9dia%20-%20ICOK_files/Podklad-768x1382.jpeg 768w, Pro%20m%C3%A9dia%20-%20ICOK_files/Podklad-854x1536.jpeg 854w, Pro%20m%C3%A9dia%20-%20ICOK_files/Podklad-1138x2048.jpeg 1138w, Pro%20m%C3%A9dia%20-%20ICOK_files/Podklad-1200x2159.jpeg 1200w" sizes="(max-width: 1423px) 100vw, 1423px">
+            </figure>
+            
+<section class="wp-block-group stripe overflow-hidden"><div class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained" bis_skin_checked="1"><div class="wp-bootstrap-blocks-container container mb-0 position-relative z-1" bis_skin_checked="1">
+	
+<div class="wp-bootstrap-blocks-row row" bis_skin_checked="1">
+	
+
+<div class="col-12" bis_skin_checked="1">
+			
+
+<h1 class="wp-block-heading aos-init aos-animate" data-aos="fade-right">PRO MÉDIA</h1>
+
+
+
+<h3 class="wp-block-heading mb-5 aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">Tiskové zprávy</h3>
+
+
+<div class="position-relative z-1 list-press" bis_skin_checked="1">
+            <div class="row g-5 position-relative z-1 load-destination-5962" bis_skin_checked="1">
+            <div class="col-md-6 col-xxl-3" bis_skin_checked="1">
+    <article class="article-event">
+        <div class="row g-4" bis_skin_checked="1">
+            <div class="col-xl-4 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/startuje-druhy-rocnik-akceleracniho-programu-od-icoku-pro-vsechny-podnikave" class="d-block article-thumbnail position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" width="1200" height="900" src="Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_9996a-1200x900.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_9996a-1200x900.jpg 1200w, Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_9996a-300x225.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_9996a-1024x768.jpg 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_9996a-768x576.jpg 768w, Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_9996a-1536x1152.jpg 1536w, Pro%20m%C3%A9dia%20-%20ICOK_files/IMG_9996a-2048x1536.jpg 2048w" sizes="(max-width: 1200px) 100vw, 1200px">                                    </a>
+            </div>
+            <div class="col-xl-8 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/startuje-druhy-rocnik-akceleracniho-programu-od-icoku-pro-vsechny-podnikave" class="article-title d-block mt-4">
+                    <h4>Startuje druhý ročník akceleračního programu od ICOKu pro všechny podnikavé</h4>
+                </a>
+                <div bis_skin_checked="1"></div>
+                <a href="https://www.inovaceok.cz/pro-media/startuje-druhy-rocnik-akceleracniho-programu-od-icoku-pro-vsechny-podnikave" class="article-link d-inline-block mt-3">
+                    <span class="me-2">Zjistit více</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                </a>
+                            </div>
+        </div>
+    </article>
+</div><div class="col-md-6 col-xxl-3" bis_skin_checked="1">
+    <article class="article-event">
+        <div class="row g-4" bis_skin_checked="1">
+            <div class="col-xl-4 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/itransys-meni-verejnou-dopravu-k-lepsimu-ted-slavi-vitezstvi-v-soutezi-startupu-na-ynovate-festu" class="d-block article-thumbnail position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" width="1200" height="800" src="Pro%20m%C3%A9dia%20-%20ICOK_files/DSC09782_nizke_r-1-1200x800.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/DSC09782_nizke_r-1-1200x800.jpg 1200w, Pro%20m%C3%A9dia%20-%20ICOK_files/DSC09782_nizke_r-1-300x200.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/DSC09782_nizke_r-1-1024x683.jpg 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/DSC09782_nizke_r-1-768x512.jpg 768w, Pro%20m%C3%A9dia%20-%20ICOK_files/DSC09782_nizke_r-1-1536x1024.jpg 1536w, Pro%20m%C3%A9dia%20-%20ICOK_files/DSC09782_nizke_r-1.jpg 2048w" sizes="(max-width: 1200px) 100vw, 1200px">                                    </a>
+            </div>
+            <div class="col-xl-8 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/itransys-meni-verejnou-dopravu-k-lepsimu-ted-slavi-vitezstvi-v-soutezi-startupu-na-ynovate-festu" class="article-title d-block mt-4">
+                    <h4>iTranSys mění veřejnou dopravu k&nbsp;lepšímu. Teď slaví vítězství v&nbsp;soutěži startupů na Ynovate Festu!</h4>
+                </a>
+                <div bis_skin_checked="1"></div>
+                <a href="https://www.inovaceok.cz/pro-media/itransys-meni-verejnou-dopravu-k-lepsimu-ted-slavi-vitezstvi-v-soutezi-startupu-na-ynovate-festu" class="article-link d-inline-block mt-3">
+                    <span class="me-2">Zjistit více</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                </a>
+                            </div>
+        </div>
+    </article>
+</div><div class="col-md-6 col-xxl-3" bis_skin_checked="1">
+    <article class="article-event">
+        <div class="row g-4" bis_skin_checked="1">
+            <div class="col-xl-4 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/olomoucky-startup-pozemkov-cz-zvitezil-v-icok-startup-academy" class="d-block article-thumbnail position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" width="1200" height="801" src="Pro%20m%C3%A9dia%20-%20ICOK_files/Hlavni-foto-1200x801.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/Hlavni-foto-1200x801.jpg 1200w, Pro%20m%C3%A9dia%20-%20ICOK_files/Hlavni-foto-300x200.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/Hlavni-foto-1024x684.jpg 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/Hlavni-foto-768x513.jpg 768w, Pro%20m%C3%A9dia%20-%20ICOK_files/Hlavni-foto-1536x1026.jpg 1536w, Pro%20m%C3%A9dia%20-%20ICOK_files/Hlavni-foto-2048x1368.jpg 2048w" sizes="(max-width: 1200px) 100vw, 1200px">                                    </a>
+            </div>
+            <div class="col-xl-8 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/olomoucky-startup-pozemkov-cz-zvitezil-v-icok-startup-academy" class="article-title d-block mt-4">
+                    <h4>Olomoucký startup Pozemkov.cz zvítězil v ICOK Startup Academy a chystá se na boj o cestu do Silicon Valley!</h4>
+                </a>
+                <div bis_skin_checked="1"></div>
+                <a href="https://www.inovaceok.cz/pro-media/olomoucky-startup-pozemkov-cz-zvitezil-v-icok-startup-academy" class="article-link d-inline-block mt-3">
+                    <span class="me-2">Zjistit více</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                </a>
+                            </div>
+        </div>
+    </article>
+</div><div class="col-md-6 col-xxl-3" bis_skin_checked="1">
+    <article class="article-event">
+        <div class="row g-4" bis_skin_checked="1">
+            <div class="col-xl-4 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/na-architekture-zalezi-media" class="d-block article-thumbnail position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" width="1200" height="800" src="Pro%20m%C3%A9dia%20-%20ICOK_files/20240321_ZS_3196-1200x800.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/20240321_ZS_3196-1200x800.jpg 1200w, Pro%20m%C3%A9dia%20-%20ICOK_files/20240321_ZS_3196-300x200.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/20240321_ZS_3196-1024x683.jpg 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/20240321_ZS_3196-768x512.jpg 768w, Pro%20m%C3%A9dia%20-%20ICOK_files/20240321_ZS_3196-1536x1024.jpg 1536w, Pro%20m%C3%A9dia%20-%20ICOK_files/20240321_ZS_3196.jpg 1795w" sizes="(max-width: 1200px) 100vw, 1200px">                                    </a>
+            </div>
+            <div class="col-xl-8 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/na-architekture-zalezi-media" class="article-title d-block mt-4">
+                    <h4>Na architektuře záleží: ICOK nabídl příklady dobré praxe nejen z&nbsp;našeho regionu</h4>
+                </a>
+                <div bis_skin_checked="1"></div>
+                <a href="https://www.inovaceok.cz/pro-media/na-architekture-zalezi-media" class="article-link d-inline-block mt-3">
+                    <span class="me-2">Zjistit více</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                </a>
+                            </div>
+        </div>
+    </article>
+</div><div class="col-md-6 col-xxl-3" bis_skin_checked="1">
+    <article class="article-event">
+        <div class="row g-4" bis_skin_checked="1">
+            <div class="col-xl-4 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/startup-academy-nakopnete-svuj-byznys-a-ziskejte-investici" class="d-block article-thumbnail position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" width="1080" height="1080" src="Pro%20m%C3%A9dia%20-%20ICOK_files/Navrh-bez-nazvu-2024-02-27T150945.314.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/Navrh-bez-nazvu-2024-02-27T150945.314.png 1080w, Pro%20m%C3%A9dia%20-%20ICOK_files/Navrh-bez-nazvu-2024-02-27T150945.314-300x300.png 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/Navrh-bez-nazvu-2024-02-27T150945.314-1024x1024.png 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/Navrh-bez-nazvu-2024-02-27T150945.314-150x150.png 150w, Pro%20m%C3%A9dia%20-%20ICOK_files/Navrh-bez-nazvu-2024-02-27T150945.314-768x768.png 768w" sizes="(max-width: 1080px) 100vw, 1080px">                                    </a>
+            </div>
+            <div class="col-xl-8 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/startup-academy-nakopnete-svuj-byznys-a-ziskejte-investici" class="article-title d-block mt-4">
+                    <h4>Startup Academy: Nakopněte svůj byznys a získejte investici!</h4>
+                </a>
+                <div bis_skin_checked="1"></div>
+                <a href="https://www.inovaceok.cz/pro-media/startup-academy-nakopnete-svuj-byznys-a-ziskejte-investici" class="article-link d-inline-block mt-3">
+                    <span class="me-2">Zjistit více</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                </a>
+                            </div>
+        </div>
+    </article>
+</div><div class="col-md-6 col-xxl-3" bis_skin_checked="1">
+    <article class="article-event">
+        <div class="row g-4" bis_skin_checked="1">
+            <div class="col-xl-4 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/knizka-buuk-zabodovala" class="d-block article-thumbnail position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" width="1200" height="800" src="Pro%20m%C3%A9dia%20-%20ICOK_files/Kniha-BUUK-1200x800.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/Kniha-BUUK-1200x800.jpg 1200w, Pro%20m%C3%A9dia%20-%20ICOK_files/Kniha-BUUK-300x200.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/Kniha-BUUK-1024x683.jpg 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/Kniha-BUUK-768x512.jpg 768w, Pro%20m%C3%A9dia%20-%20ICOK_files/Kniha-BUUK-1536x1025.jpg 1536w" sizes="(max-width: 1200px) 100vw, 1200px">                                    </a>
+            </div>
+            <div class="col-xl-8 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/knizka-buuk-zabodovala" class="article-title d-block mt-4">
+                    <h4>Knížka BUUK zabodovala v&nbsp;soutěži Hračka roku. Získala první místo</h4>
+                </a>
+                <div bis_skin_checked="1"></div>
+                <a href="https://www.inovaceok.cz/pro-media/knizka-buuk-zabodovala" class="article-link d-inline-block mt-3">
+                    <span class="me-2">Zjistit více</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                </a>
+                            </div>
+        </div>
+    </article>
+</div><div class="col-md-6 col-xxl-3" bis_skin_checked="1">
+    <article class="article-event">
+        <div class="row g-4" bis_skin_checked="1">
+            <div class="col-xl-4 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/v-prerove-se-otevrel-in-hub-nabizi-prostor-pro-podnikani-i-inovace" class="d-block article-thumbnail position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" width="1000" height="750" src="Pro%20m%C3%A9dia%20-%20ICOK_files/648c1b9dc7f688131505101.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/648c1b9dc7f688131505101.jpg 1000w, Pro%20m%C3%A9dia%20-%20ICOK_files/648c1b9dc7f688131505101-300x225.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/648c1b9dc7f688131505101-768x576.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px">                                    </a>
+            </div>
+            <div class="col-xl-8 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/v-prerove-se-otevrel-in-hub-nabizi-prostor-pro-podnikani-i-inovace" class="article-title d-block mt-4">
+                    <h4>V Přerově se otevřel IN-HUB. Nabízí prostor pro podnikání i inovace</h4>
+                </a>
+                <div bis_skin_checked="1"></div>
+                <a href="https://www.inovaceok.cz/pro-media/v-prerove-se-otevrel-in-hub-nabizi-prostor-pro-podnikani-i-inovace" class="article-link d-inline-block mt-3">
+                    <span class="me-2">Zjistit více</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                </a>
+                            </div>
+        </div>
+    </article>
+</div><div class="col-md-6 col-xxl-3" bis_skin_checked="1">
+    <article class="article-event">
+        <div class="row g-4" bis_skin_checked="1">
+            <div class="col-xl-4 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/tiskova-zprava-i" class="d-block article-thumbnail position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" width="1000" height="780" src="Pro%20m%C3%A9dia%20-%20ICOK_files/644904c41e6489154678613.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/644904c41e6489154678613.jpg 1000w, Pro%20m%C3%A9dia%20-%20ICOK_files/644904c41e6489154678613-300x234.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/644904c41e6489154678613-768x599.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px">                                    </a>
+            </div>
+            <div class="col-xl-8 col-xxl-12" bis_skin_checked="1">
+                <a href="https://www.inovaceok.cz/pro-media/tiskova-zprava-i" class="article-title d-block mt-4">
+                    <h4>Udržitelnost a ESG jako zásadní téma. Tým ICOK se vzdělával</h4>
+                </a>
+                <div bis_skin_checked="1"></div>
+                <a href="https://www.inovaceok.cz/pro-media/tiskova-zprava-i" class="article-link d-inline-block mt-3">
+                    <span class="me-2">Zjistit více</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.8393 1H11M11 1V9.1607M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                </a>
+                            </div>
+        </div>
+    </article>
+</div>        </div>
+        </div>
+	</div>
+
+</div>
+
+
+    <div class="pattern " style="left:-200px;top:45%;" bis_skin_checked="1">
+        <img decoding="async" src="Pro%20m%C3%A9dia%20-%20ICOK_files/11.svg" alt="" width="" height="">
+    </div>
+    
+
+    <div class="pattern no-float" style="right:-100px;top:0;" bis_skin_checked="1">
+        <img decoding="async" src="Pro%20m%C3%A9dia%20-%20ICOK_files/Vector-1.svg" alt="" width="" height="">
+    </div>
+    
+</div>
+</div></section>
+
+
+
+<section class="wp-block-group stripe"><div class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained" bis_skin_checked="1"><div class="wp-bootstrap-blocks-container container mb-2" bis_skin_checked="1">
+	
+<div class="wp-bootstrap-blocks-row row" bis_skin_checked="1">
+	
+
+<div class="col-12" bis_skin_checked="1">
+			
+
+<h2 class="wp-block-heading has-text-align-center aos-init aos-animate" data-aos="fade-up">Soubory ke stažení</h2>
+
+
+
+<div class="wp-block-group pt-5" bis_skin_checked="1"><div class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained" bis_skin_checked="1">    <div class="files" bis_skin_checked="1">
+        <div class="row g-5" bis_skin_checked="1">
+                            <div class="col-sm-6 col-lg-3" bis_skin_checked="1">
+                    <div class="file-box aos-init aos-animate" data-aos="fade-left" data-aos-delay="0" bis_skin_checked="1">
+                        <div class="mb-3" bis_skin_checked="1">
+                                                            <div class="file-thumbnail" bis_skin_checked="1">
+                                    <img decoding="async" src="Pro%20m%C3%A9dia%20-%20ICOK_files/Hledame-nove-kolegy-1.png" alt="">
+                                </div>
+                                                        </div>
+                                                    <div class="d-flex justify-content-between" bis_skin_checked="1">
+                                <div class="text-uppercase" bis_skin_checked="1">pdf</div>
+                                <div class="text-end" bis_skin_checked="1">15.57 MB</div>
+                            </div>
+                            <h4>Výroční zpráva 2022</h4>
+                            <div class="file-box-border" bis_skin_checked="1"></div>
+                            <a href="https://www.inovaceok.cz/wp-content/uploads/2023/12/Vyrocni-zprava-ICOK-2022_FINAL.pdf" class="file-box-link d-flex align-items-center" download="">
+                                <span class="d-inline-block me-2">Stáhnout</span>
+                                <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.8408 10.3008L7.07031 16.0713M7.07031 16.0713L1.29982 10.3008M7.07031 16.0713L7.07031 1.92915" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M12.8408 10.3008L7.07031 16.0713M7.07031 16.0713L1.29982 10.3008M7.07031 16.0713L7.07031 1.92915" stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M12.8408 10.3008L7.07031 16.0713M7.07031 16.0713L1.29982 10.3008M7.07031 16.0713L7.07031 1.92915" stroke="black" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                            </a>
+                                                </div>
+                </div>
+                        </div>
+    </div>
+    </div></div>
+
+	</div>
+
+</div>
+
+</div>
+</div></section>
+
+
+
+<section class="wp-block-group stripe has-background" style="background-color:#eeb400"><div class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained" bis_skin_checked="1"><div class="wp-bootstrap-blocks-container container mb-0" bis_skin_checked="1">
+	
+<div class="wp-bootstrap-blocks-row row align-items-center" bis_skin_checked="1">
+	
+
+<div class="col-12 col-md-6 col-lg-6" bis_skin_checked="1">
+			
+
+<p class="mb-5 aos-init aos-animate" data-aos="fade-right"><strong>KONTAKUJTE NÁS</strong></p>
+
+
+
+<h3 class="wp-block-heading aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">Nenašli jste? Napište nám a my Vám rádi pomůžeme.</h3>
+
+	</div>
+
+
+
+<div class="col-12 col-md-6" bis_skin_checked="1">
+			
+
+<div class="wp-block-group aos-init aos-animate" data-aos="fade-left" bis_skin_checked="1"><div class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained" bis_skin_checked="1">    <div class="medailon mt-5 mt-xl-0" bis_skin_checked="1">
+        <div class="row align-items-sm-center text-center text-sm-start" bis_skin_checked="1">
+            <div class="col-6 col-md-4 col-xl-5 mx-auto" bis_skin_checked="1">
+                                    <div class="medailon-contact-thumbnail mb-3 mb-sm-0" bis_skin_checked="1">
+                        <img loading="lazy" decoding="async" width="800" height="800" src="Pro%20m%C3%A9dia%20-%20ICOK_files/PP.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/PP.jpg 800w, Pro%20m%C3%A9dia%20-%20ICOK_files/PP-300x300.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/PP-150x150.jpg 150w, Pro%20m%C3%A9dia%20-%20ICOK_files/PP-768x768.jpg 768w" sizes="(max-width: 800px) 100vw, 800px">                    </div>
+                                </div>
+            <div class="col-sm-6 col-md-8 col-xl-7" bis_skin_checked="1">
+                <h4>Petra Pášová</h4>
+                <p><!-- wp:paragraph -->
+</p><p>PR / Média<br><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-white-color">.</mark></p>
+<!-- /wp:paragraph --><p></p>
+                                    <div bis_skin_checked="1">
+                        <a href="tel:+420602671402" class="medailon-contact-info d-inline-flex align-items-center">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.75037 3.15855C11.4882 3.15855 13.7035 5.43902 13.7035 8.25733M8.75037 1C12.6446 1 15.8004 4.24859 15.8004 8.25733M1.10824 1.83904C0.968908 2.09003 0.982841 2.43426 1.04554 2.79282C1.67251 6.41431 3.37231 9.65573 5.76179 12.1226C8.15126 14.5896 11.3906 16.4254 14.7972 16.9561C15.1455 17.0135 15.4799 17.035 15.7237 16.8915C15.8073 16.8413 15.9188 16.7481 15.9467 16.6047L16.504 14.023C16.5458 13.8007 16.4691 13.5712 16.295 13.3848C16.2114 13.2987 14.3096 12.5888 13.4109 12.1442C13.0417 11.9577 12.6098 12.0653 12.4286 12.3736L12.0803 12.9904C11.9619 13.1983 11.7599 13.3561 11.5369 13.4135C10.6592 13.643 7.94227 11.0685 7.35013 10.4589C6.73708 9.82784 4.15255 6.95933 4.37548 6.05575C4.43121 5.8191 4.58447 5.6183 4.78649 5.49639C5.30897 5.18085 5.16964 5.26691 5.37864 5.13783C5.68516 4.95137 5.78965 4.50675 5.60853 4.12668C5.21841 3.30198 4.98852 2.52748 4.73076 1.64541C4.6193 1.25817 4.25705 0.949801 3.89479 1.02869C3.89479 1.02869 3.853 1.03586 1.37296 1.60956C1.2406 1.63824 1.15003 1.74581 1.10127 1.83904H1.10824Z" stroke="black" stroke-linecap="round"></path>
+</svg>
+                            +420 602 671 402                        </a>
+                    </div>
+                                        <div bis_skin_checked="1">
+                        <a href="mailto:pasova@inovaceok.cz" class="medailon-contact-info d-inline-flex align-items-center">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.3333 5.77995V16.2892C17.3333 16.6745 17.0203 16.9898 16.6377 16.9898H2.029C1.64639 16.9898 1.33334 16.6745 1.33334 16.2892V5.77995M17.3333 5.77995L9.69508 1.09984C9.47247 0.966721 9.19421 0.966721 8.9716 1.09984L1.33334 5.77995M17.3333 5.77995L17.3264 5.77994L9.75769 11.7492C9.50726 11.9454 9.15247 11.9454 8.90204 11.7492L1.33334 5.77995" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                            pasova@inovaceok.cz                        </a>
+                    </div>
+                    <!--                <div class="pt-3">-->
+<!--                    --><!--                        <a href="--><!--" class="btn btn-outline-dark"-->
+<!--                           target="--><!--">--><!--</a>-->
+<!--                        --><!--                </div>-->
+            </div>
+        </div>
+    </div>
+    </div></div>
+
+	</div>
+
+</div>
+
+</div>
+</div></section>
+
+
+<section class="stripe-lg section-reference" style=";background-image:url(https://www.inovaceok.cz/wp-content/themes/soul/img/bg_references.svg);">
+    <div class="container" bis_skin_checked="1">
+        <div class="row" bis_skin_checked="1">
+            <div class="col-lg-12" bis_skin_checked="1">
+                                    <h2 class="text-center aos-init aos-animate" data-aos="fade-up">Napsali o nás</h2>
+                                    <div class="reference-slider pt-5 slick-initialized slick-slider slick-dotted" bis_skin_checked="1"><button type="button" class="slick-arrow slick-prev" style=""><svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 23L1.64706 12L12 1"></path> <path d="M12 23L1.64706 12L12 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg></button>
+                                                    
+                                                        
+                                                        
+                                                <div class="slick-list draggable" bis_skin_checked="1"><div class="slick-track" style="opacity: 1; width: 7644px; transform: translate3d(-3276px, 0px, 0px);" bis_skin_checked="1"><article class="text-center slick-slide slick-cloned" id="" style="width: 1092px;" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control02" data-slick-index="-1" aria-hidden="true">
+                                <div class="row" bis_skin_checked="1">
+                                    <div class="col-lg-8 mx-auto" bis_skin_checked="1">
+                                        <a href="https://www.inovaceok.cz/reference/thomas-doe" tabindex="-1">
+                                                                                    </a>
+                                        <a href="https://www.inovaceok.cz/reference/thomas-doe" class="reference-title d-inline-block text-decoration-none mt-4" tabindex="-1">
+                                            <h3>Libor Chmelař</h3>
+                                        </a>
+                                        <p class="text-center lead">Logaritma</p>
+                                        <div class="pt-3" bis_skin_checked="1">
+                                            <div id="" bis_skin_checked="1">
+
+<span style="font-weight: 400;">Od začátku byla spolupráce velmi dobře 
+nastavená, především díky otevřenému dialogu. Řekli jsme si co 
+potřebujeme a ICOK dokázal vše velmi rychle zanalyzovat a doporučit nám 
+experta pro danu oblast. Shodou okolností se jím stal Petr Chládek, se 
+kterým jsme se už z oblasti automotive výroby znali. Věděl přesně na co 
+se zaměřit a jakým způsobem pracovat, to nám hodně pomohlo. Proto už teď
+ s inovačním centrem rozvíjíme spolupráci i v dalších oblastech.</span>
+
+</div>                                        </div>
+                                    </div>
+                                </div>
+                            </article><article class="text-center slick-slide" id="slick-slide00" style="width: 1092px;" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control00" data-slick-index="0" aria-hidden="true">
+                                <div class="row" bis_skin_checked="1">
+                                    <div class="col-lg-8 mx-auto" bis_skin_checked="1">
+                                        <a href="https://www.inovaceok.cz/reference/john-doe" tabindex="-1">
+                                                                                    </a>
+                                        <a href="https://www.inovaceok.cz/reference/john-doe" class="reference-title d-inline-block text-decoration-none mt-4" tabindex="-1">
+                                            <h3>Dominik Vlasák</h3>
+                                        </a>
+                                        <p class="text-center lead">účastník ICOK Bootcamp</p>
+                                        <div class="pt-3" bis_skin_checked="1">
+                                            <span style="font-weight: 400;">V
+ hlavě nosím spoustu nápadů, ale v mém okolí nikdo nepodniká, proto jsem
+ se na Bootcamp přihlásil. A bylo to super! Byla to skvělá zkušenost, 
+potkal jsem zajímavé lidi, dozvěděl se spoustu věcí a navázal řadu 
+kontaktů a o to mi šlo. Jsem moc rád, že se v Olomouci podobná akce 
+uskutečnila.</span>                                        </div>
+                                    </div>
+                                </div>
+                            </article><article class="text-center slick-slide" id="slick-slide01" style="width: 1092px;" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control01" data-slick-index="1" aria-hidden="true">
+                                <div class="row" bis_skin_checked="1">
+                                    <div class="col-lg-8 mx-auto" bis_skin_checked="1">
+                                        <a href="https://www.inovaceok.cz/reference/jan-tobolik" tabindex="-1">
+                                            <img loading="lazy" decoding="async" width="1080" height="1080" src="Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-5.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-5.jpg 1080w, Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-5-300x300.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-5-1024x1024.jpg 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-5-150x150.jpg 150w, Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-5-768x768.jpg 768w" sizes="(max-width: 1080px) 100vw, 1080px">                                        </a>
+                                        <a href="https://www.inovaceok.cz/reference/jan-tobolik" class="reference-title d-inline-block text-decoration-none mt-4" tabindex="-1">
+                                            <h3>Jan Tobolík</h3>
+                                        </a>
+                                        <p class="text-center lead">Sensio.cz</p>
+                                        <div class="pt-3" bis_skin_checked="1">
+                                            <span style="font-weight: 400;">Spolupráce
+ s ICOKem nám díky jejich voucherům přinesla kontakty na skvělé 
+businessové odborníky a také nás propojila s univerzitami z Olomouckého 
+kraje, což nám umožňuje přinášet komplexnější produkty a služby.</span>                                        </div>
+                                    </div>
+                                </div>
+                            </article><article class="text-center slick-slide slick-current slick-active" id="slick-slide02" style="width: 1092px;" tabindex="0" role="tabpanel" aria-describedby="slick-slide-control02" data-slick-index="2" aria-hidden="false">
+                                <div class="row" bis_skin_checked="1">
+                                    <div class="col-lg-8 mx-auto" bis_skin_checked="1">
+                                        <a href="https://www.inovaceok.cz/reference/thomas-doe" tabindex="0">
+                                                                                    </a>
+                                        <a href="https://www.inovaceok.cz/reference/thomas-doe" class="reference-title d-inline-block text-decoration-none mt-4" tabindex="0">
+                                            <h3>Libor Chmelař</h3>
+                                        </a>
+                                        <p class="text-center lead">Logaritma</p>
+                                        <div class="pt-3" bis_skin_checked="1">
+                                            <div id="lipsum" bis_skin_checked="1">
+
+<span style="font-weight: 400;">Od začátku byla spolupráce velmi dobře 
+nastavená, především díky otevřenému dialogu. Řekli jsme si co 
+potřebujeme a ICOK dokázal vše velmi rychle zanalyzovat a doporučit nám 
+experta pro danu oblast. Shodou okolností se jím stal Petr Chládek, se 
+kterým jsme se už z oblasti automotive výroby znali. Věděl přesně na co 
+se zaměřit a jakým způsobem pracovat, to nám hodně pomohlo. Proto už teď
+ s inovačním centrem rozvíjíme spolupráci i v dalších oblastech.</span>
+
+</div>                                        </div>
+                                    </div>
+                                </div>
+                            </article><article class="text-center slick-slide slick-cloned" id="" style="width: 1092px;" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control00" data-slick-index="3" aria-hidden="true">
+                                <div class="row" bis_skin_checked="1">
+                                    <div class="col-lg-8 mx-auto" bis_skin_checked="1">
+                                        <a href="https://www.inovaceok.cz/reference/john-doe" tabindex="-1">
+                                                                                    </a>
+                                        <a href="https://www.inovaceok.cz/reference/john-doe" class="reference-title d-inline-block text-decoration-none mt-4" tabindex="-1">
+                                            <h3>Dominik Vlasák</h3>
+                                        </a>
+                                        <p class="text-center lead">účastník ICOK Bootcamp</p>
+                                        <div class="pt-3" bis_skin_checked="1">
+                                            <span style="font-weight: 400;">V
+ hlavě nosím spoustu nápadů, ale v mém okolí nikdo nepodniká, proto jsem
+ se na Bootcamp přihlásil. A bylo to super! Byla to skvělá zkušenost, 
+potkal jsem zajímavé lidi, dozvěděl se spoustu věcí a navázal řadu 
+kontaktů a o to mi šlo. Jsem moc rád, že se v Olomouci podobná akce 
+uskutečnila.</span>                                        </div>
+                                    </div>
+                                </div>
+                            </article><article class="text-center slick-slide slick-cloned" id="" style="width: 1092px;" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control01" data-slick-index="4" aria-hidden="true">
+                                <div class="row" bis_skin_checked="1">
+                                    <div class="col-lg-8 mx-auto" bis_skin_checked="1">
+                                        <a href="https://www.inovaceok.cz/reference/jan-tobolik" tabindex="-1">
+                                            <img loading="lazy" decoding="async" width="1080" height="1080" src="Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-5.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-5.jpg 1080w, Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-5-300x300.jpg 300w, Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-5-1024x1024.jpg 1024w, Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-5-150x150.jpg 150w, Pro%20m%C3%A9dia%20-%20ICOK_files/PRVKY-WEB-ICOK-5-768x768.jpg 768w" sizes="(max-width: 1080px) 100vw, 1080px">                                        </a>
+                                        <a href="https://www.inovaceok.cz/reference/jan-tobolik" class="reference-title d-inline-block text-decoration-none mt-4" tabindex="-1">
+                                            <h3>Jan Tobolík</h3>
+                                        </a>
+                                        <p class="text-center lead">Sensio.cz</p>
+                                        <div class="pt-3" bis_skin_checked="1">
+                                            <span style="font-weight: 400;">Spolupráce
+ s ICOKem nám díky jejich voucherům přinesla kontakty na skvělé 
+businessové odborníky a také nás propojila s univerzitami z Olomouckého 
+kraje, což nám umožňuje přinášet komplexnější produkty a služby.</span>                                        </div>
+                                    </div>
+                                </div>
+                            </article><article class="text-center slick-slide slick-cloned" id="" style="width: 1092px;" tabindex="-1" role="tabpanel" aria-describedby="slick-slide-control02" data-slick-index="5" aria-hidden="true">
+                                <div class="row" bis_skin_checked="1">
+                                    <div class="col-lg-8 mx-auto" bis_skin_checked="1">
+                                        <a href="https://www.inovaceok.cz/reference/thomas-doe" tabindex="-1">
+                                                                                    </a>
+                                        <a href="https://www.inovaceok.cz/reference/thomas-doe" class="reference-title d-inline-block text-decoration-none mt-4" tabindex="-1">
+                                            <h3>Libor Chmelař</h3>
+                                        </a>
+                                        <p class="text-center lead">Logaritma</p>
+                                        <div class="pt-3" bis_skin_checked="1">
+                                            <div id="" bis_skin_checked="1">
+
+<span style="font-weight: 400;">Od začátku byla spolupráce velmi dobře 
+nastavená, především díky otevřenému dialogu. Řekli jsme si co 
+potřebujeme a ICOK dokázal vše velmi rychle zanalyzovat a doporučit nám 
+experta pro danu oblast. Shodou okolností se jím stal Petr Chládek, se 
+kterým jsme se už z oblasti automotive výroby znali. Věděl přesně na co 
+se zaměřit a jakým způsobem pracovat, to nám hodně pomohlo. Proto už teď
+ s inovačním centrem rozvíjíme spolupráci i v dalších oblastech.</span>
+
+</div>                                        </div>
+                                    </div>
+                                </div>
+                            </article></div></div><button type="button" class="slick-arrow slick-next" style=""><svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1 23L11.3529 12L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </svg></button><ul class="slick-dots" style="" role="tablist"><li class="" role="presentation"><button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 3" tabindex="-1">1</button></li><li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 3" tabindex="-1">2</button></li><li role="presentation" class="slick-active"><button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02" aria-label="3 of 3" tabindex="0" aria-selected="true">3</button></li></ul></div>
+                                </div>
+        </div>
+    </div>
+</section>            </main>
+
+<footer class="stripe-lg-top bg-black z-1">
+    <div class="container" bis_skin_checked="1">
+        <div class="row" bis_skin_checked="1">
+            <div class="col-lg-12" bis_skin_checked="1">
+                <div class="stripe-lg footer-bg" style="background-image:url(https://www.inovaceok.cz/wp-content/themes/soul/img/bg_footer_new.svg);" bis_skin_checked="1">
+                    <div class="row" bis_skin_checked="1">
+                        <div class="col-lg-9 col-xl-6 col-xxl-4" bis_skin_checked="1">
+                            <h2 class="text-white footer-heading">Přidejte se k nám, ať vám neunikne žádná novinka</h2>
+                        </div>
+                        <div class="col-xxl-7 offset-xxl-1" bis_skin_checked="1">
+                            
+<div class="wpcf7 js" id="wpcf7-f166-o1" lang="cs-CZ" dir="ltr" bis_skin_checked="1">
+<div class="screen-reader-response" bis_skin_checked="1"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/pro-media#wpcf7-f166-o1" method="post" class="wpcf7-form init" aria-label="Kontaktní formulář" novalidate="novalidate" data-status="init">
+<div style="display: none;" bis_skin_checked="1">
+<input type="hidden" name="_wpcf7" value="166">
+<input type="hidden" name="_wpcf7_version" value="5.9.8">
+<input type="hidden" name="_wpcf7_locale" value="cs_CZ">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f166-o1">
+<input type="hidden" name="_wpcf7_container_post" value="0">
+<input type="hidden" name="_wpcf7_posted_data_hash" value="">
+<input type="hidden" name="_wpcf7_recaptcha_response" value="03AFcWeA4Y8zBWAuX-49zLjayTwFnafNSmhl7cp8fY0sEs_AjvDTUaULlzuMbrCCfFg1HE4fUL6l4S2Ko301Y6H2-AlYLZNnbp2rTkA_6MzI8p1WotmvFjuXZZ0Z0WvJ6z9_Qr4aLqg4VVv1okhZPBMKgXI_q9Vjus97yqIQli6IMdGcF4f-3qpL1ZO_cMJxUrz-ijSATesF08nWro-_OWF_AKHqak0yY1M9wLc_2_Od1_ZGoyRL3VT4xTOERmrM3-s8t0rRLVUjNZ85DgQtY9t0NDYV7r5DSQJX88B_FrboPZ2qeWPEH8-_HfrDRDKyufZCOj9Xx4WTrynhRQaK8qu8Osa2SZSjuYCSrWmqTLYo0Z5OuONv3bgBoUGp_Mpr-UeF4wr8DyDwRcKil0YyuAP-oWVLgaXLQYE4TM4yyp2CVgHHdUKbYbOI-mxAqz7RYHeecMuvZeV5tkLhoIInHYaZ7BjMMWb-gnnNJGLkn_Fw4RXTAfsspHd5CQZJOFWT4rS20Pbh21Gkjh_m5cBUeDYz5Xza2uD42Y25lnfWeA6SZn68T6rCUGYhRxzbg7PobbNboSKcz5Lh63sszihiPiXAKtO6DqhFacfyJQvi5VilPUlpYN6sEB_VG3EJk9wnhPXNPgX9jmlxBu0sCclxiIhDaKjERj_UmjQ-L4pGnG7-nqdl1sPprsZz-JVLZPkrUXUWHyf3G6uEQau5Civ2hfANVBbM8PWCX0z_NyELbjF_Ui4Mry61yX34kjn9GeFzPLtukGO2NDI9GiyBHOsHpOhI3fsru-5A3sY3pxKgE_sVg4_9uO8ycdZIL3_SUEqE4pqz4rvdqoGWbDQlpCdq7sVt6iRv6EoBRhpyrJ66W-t3hwJm1av-sqq9sGMhRlV39cV1KaWPq7cQJrGCzxVk16NqalC82NG6RSmRi_dbI9qNV1eizsRvmzGzoItDzy1juLjv02rD6NJHm5TVHpcU7fMDTDp61wMN1FkmnOW-y3kcOs7Fbh9gN34DaYy88l4e5ca2dRtB0-lBGwcQ3XRGGBkx9Cnr2uRLCElCmE-LipvkoJLgzxQ-EyC0idKROxF6RFB7JoRc7tYstjca_SzYMCVv5OTQgH0btY7V1cZzhTzTsYcsViGgGEtoAw9XSVu-Q0yqczcV8uGW8NXPaWlAuax5hY1ed9Ma8XgZzdO4V5eCKjGt9nV-bHenXI6BqYqNmo5avm_jpZbswc-9pXN3xZf-BVjxu7AZ4wZ1uqSRvMUlgJ2yUdjWonl4_zfGkxh-U7QbieyBDk_pgJba6sRv2iB3IN9kmBB7bxioKAMxmtaIJ625vy50yP9vs6SkUiQfOOd8NYi5BLsgYkMuHMcSIfiLlZM6vBcX6EB698HUjbrMPzj4jyI9THA3e9rwARzPq6haRyWKkYndXhpvDJDGb4yTd0faeK5WuCWFqkz7HtKNOKnciSNt7K4x1EmtDLJOmli1PNDT37rn15A_x_5wKY71UXNXo2x-JjtdMiVmZa853sxfSQpjJH2fJVHlA0D_-fXKWeeMoQbKt6w92HQNFUyLdyQGRng_QDatBOYVxBPYHAkSxYqCLbNT7KfuQrUhxG29vqY-A5xiuD5aT_hAs-rCJgKeuhwCSbURrQMLzZDI354pJQzV2INKQaQTL7W1mkmpXAAyWIYPkv05ldctS7pqr-K8Il1VFce-c6OPvbJ989cwXpVA-5FbUEO4IK3MkZmTMgnRub-yVVMCVNoc3_pvjnCxLEZsei4GxTw0yoqS1S2W5zre_gqZt7-MqJSi4pewv5K3SVQPi2zewkUMCYHH8C1cdaFcoVx0A03MpMInW5mXtTf1PZ5g9OAF8Mb97ah-Jzc3Er5MQt8zM3MxJmTp2msf-FjYf3toXMqjDYTZvHGjLB2tRPGGScU7e_AjFCr3F3yWIjKTuxh9_5t0tpXSbHv-jM2rsOi5x3pmv8neX-VnUX5Hw0uhJn5stZ1Ecqpr-pTNUYcYZht2nS1SomPlBRfWU75VKU9SVwp9fj0Mla1gBXAF-TDzJC0PLWxdM-6yUZNaJgPFifO4n9yqbHiISTvypa0iBCVugkpr_1kKV7UGEFX-RT-bL5b-LNk9j5FRiB0t_WcZvz">
+</div>
+<div class="row" bis_skin_checked="1">
+	<div class="col-lg-12" bis_skin_checked="1">
+		<p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Zde zadejte váš email" type="email" name="your-email"></span>
+		</p>
+		<div class="row pt-2" bis_skin_checked="1">
+			<div class="col-lg-8" bis_skin_checked="1">
+				<p class="form-info">Odesláním souhlasíte se zpracováváním <a href="https://www.inovaceok.cz/ochrana-osobnich-udaju/">osobních údajů</a>.
+				</p>
+			</div>
+			<div class="col-lg-4" bis_skin_checked="1">
+				<div class="text-end" bis_skin_checked="1">
+					<p><input class="wpcf7-form-control wpcf7-submit has-spinner btn btn-light" type="submit" value="Odebírat"><span class="wpcf7-spinner"></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><div class="wpcf7-response-output" aria-hidden="true" bis_skin_checked="1"></div>
+</form>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stripe-top pb-3" bis_skin_checked="1">
+        <div class="container" bis_skin_checked="1">
+            <div class="row g-5" bis_skin_checked="1">
+                <div class="col-lg-4 col-xl-3" bis_skin_checked="1">
+                    <img src="Pro%20m%C3%A9dia%20-%20ICOK_files/logo_white_cs_CZ.svg" alt="ICOK">
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3" bis_skin_checked="1">
+                    <p class="text-primary fw-bold">Inovační centrum Olomouckého kraje</p>
+                    <p class="text-white">
+                                                17. listopadu 1230/8a<br>
+                        779 00, Olomouc<br>
+                        IČO: 72555149<br>
+                        Datová schránka: j2rqxqk                    </p>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-2 offset-xl-1" bis_skin_checked="1">
+                    <p class="text-primary fw-bold">Kontakt</p>
+                    <p class="text-white">
+                                                <a href="tel:+420727875805" class="footer-link">+420 727 875 805</a><br>
+                        <a href="tel:Fakturace:+420725532224" class="footer-link">Fakturace: +420 725 532 224</a><br>
+                        <a href="mailto:inovaceok@inovaceok.cz" class="footer-link">inovaceok@inovaceok.cz</a>
+                    </p>
+                </div>
+<!--                <div class="col-xl-3 text-xl-end">-->
+<!--                    <a href="--><!--"-->
+<!--                       class="btn btn-outline-light">--><!--</a>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+            <div class="container" bis_skin_checked="1">
+            <div class="row" bis_skin_checked="1">
+                <div class="col-lg-12" bis_skin_checked="1">
+                    <div class="border-top mt-5 pt-5" bis_skin_checked="1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pt-3" bis_skin_checked="1">
+            <div class="container" bis_skin_checked="1">
+                <div class="row align-items-lg-center" bis_skin_checked="1">
+                    <div class="col-lg-3" bis_skin_checked="1">
+                        <p class="text-white lead pb-5 mb-0">Our founders</p>
+                    </div>
+                    <div class="col-lg-9" bis_skin_checked="1">
+                        <div class="row" bis_skin_checked="1">
+                                                            <div class="col-6 col-md-3 mb-5" bis_skin_checked="1">
+                                                                            <a href="https://www.olkraj.cz/" target="_blank" bis_size="{&quot;x&quot;:641,&quot;y&quot;:4338,&quot;w&quot;:180,&quot;h&quot;:16,&quot;abs_x&quot;:641,&quot;abs_y&quot;:4338}">
+                                            <img src="Pro%20m%C3%A9dia%20-%20ICOK_files/olomoucky_kraj.svg" alt="" bis_size="{&quot;x&quot;:641,&quot;y&quot;:4320,&quot;w&quot;:180,&quot;h&quot;:53,&quot;abs_x&quot;:641,&quot;abs_y&quot;:4320}" bis_id="bn_xltjwmfrgbscebjq46q9og">
+                                        </a>
+                                                                        </div>
+                                                                <div class="col-6 col-md-3 mb-5" bis_skin_checked="1">
+                                                                            <a href="https://www.upol.cz/" target="_blank" bis_size="{&quot;x&quot;:888,&quot;y&quot;:4342,&quot;w&quot;:199,&quot;h&quot;:16,&quot;abs_x&quot;:888,&quot;abs_y&quot;:4342}">
+                                            <img src="Pro%20m%C3%A9dia%20-%20ICOK_files/UP_logo_horizont_bila_cz.png" alt="" bis_size="{&quot;x&quot;:888,&quot;y&quot;:4320,&quot;w&quot;:199,&quot;h&quot;:62,&quot;abs_x&quot;:888,&quot;abs_y&quot;:4320}" bis_id="bn_nybohhrnkzctu3loihtoym">
+                                        </a>
+                                                                        </div>
+                                                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    <div class="container" bis_skin_checked="1">
+            <div class="row" bis_skin_checked="1">
+                <div class="col-lg-12" bis_skin_checked="1">
+                    <div class="border-top mt-4 pb-5" bis_skin_checked="1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pt-3 pb-3" bis_skin_checked="1">
+            <div class="container" bis_skin_checked="1">
+                <div class="row align-items-lg-center" bis_skin_checked="1">
+                    <div class="col-lg-3" bis_skin_checked="1">
+                        <p class="text-white lead pb-5 mb-0">Jsme součástí sítě</p>
+                    </div>
+                    <div class="col-lg-9" bis_skin_checked="1">
+                        <div class="row align-items-center" bis_skin_checked="1">
+                                                            <div class="col-6 col-md-3 mb-5" bis_skin_checked="1">
+                                                                            <a href="https://naslapnu.to/" target="_blank" bis_size="{&quot;x&quot;:64,&quot;y&quot;:9075,&quot;w&quot;:222,&quot;h&quot;:16,&quot;abs_x&quot;:64,&quot;abs_y&quot;:9075}">
+                                            <img src="Pro%20m%C3%A9dia%20-%20ICOK_files/naslapnuto.svg" alt="" style="width:100%;height:auto;" bis_size="{&quot;x&quot;:64,&quot;y&quot;:9064,&quot;w&quot;:222,&quot;h&quot;:40,&quot;abs_x&quot;:64,&quot;abs_y&quot;:9064}" bis_id="bn_rx8hp4tu658fdaiwi4kwy9">
+                                        </a>
+                                                                        </div>
+                                                                <div class="col-6 col-md-3 mb-5" bis_skin_checked="1">
+                                                                            <a href="https://www.ris3ok.cz/" target="_blank" bis_size="{&quot;x&quot;:888,&quot;y&quot;:4552,&quot;w&quot;:199,&quot;h&quot;:16,&quot;abs_x&quot;:888,&quot;abs_y&quot;:4552}">
+                                            <img src="Pro%20m%C3%A9dia%20-%20ICOK_files/ris3ok-_1_.svg" alt="" style="width:100%;height:auto;" bis_size="{&quot;x&quot;:888,&quot;y&quot;:4535,&quot;w&quot;:199,&quot;h&quot;:51,&quot;abs_x&quot;:888,&quot;abs_y&quot;:4535}" bis_id="bn_dhfb7latj3di1f9o31lkkv">
+                                        </a>
+                                                                        </div>
+                                                                <div class="col-6 col-md-3 mb-5" bis_skin_checked="1">
+                                                                            <a href="https://www.ynovate.cz/cz/" target="_blank" bis_size="{&quot;x&quot;:1136,&quot;y&quot;:4552,&quot;w&quot;:199,&quot;h&quot;:16,&quot;abs_x&quot;:1136,&quot;abs_y&quot;:4552}">
+                                            <img src="Pro%20m%C3%A9dia%20-%20ICOK_files/ynovate.svg" alt="" style="width:100%;height:auto;" bis_size="{&quot;x&quot;:1136,&quot;y&quot;:4534,&quot;w&quot;:199,&quot;h&quot;:53,&quot;abs_x&quot;:1136,&quot;abs_y&quot;:4534}" bis_id="bn_6idh2bvs36we0fqj3vougn">
+                                        </a>
+                                                                        </div>
+                                                                <div class="col-6 col-md-3 mb-5" bis_skin_checked="1">
+                                                                            <a href="https://ebn.eu/" target="_blank" bis_size="{&quot;x&quot;:1383,&quot;y&quot;:4552,&quot;w&quot;:199,&quot;h&quot;:16,&quot;abs_x&quot;:1383,&quot;abs_y&quot;:4552}">
+                                            <img src="Pro%20m%C3%A9dia%20-%20ICOK_files/eubic.svg" alt="" style="width:100%;height:auto;" bis_size="{&quot;x&quot;:1383,&quot;y&quot;:4519,&quot;w&quot;:199,&quot;h&quot;:84,&quot;abs_x&quot;:1383,&quot;abs_y&quot;:4519}" bis_id="bn_mtv7fbcxmoi5ca3g04ofwf">
+                                        </a>
+                                                                        </div>
+                                                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </footer>
+<div class="footer-bottom stripe bg-black" bis_skin_checked="1">
+    <div class="container" bis_skin_checked="1">
+        <div class="row align-items-md-center" bis_skin_checked="1">
+            <div class="col-md-3" bis_skin_checked="1">
+                                    <ul class="d-flex align-items-center list-social list-unstyled mb-0">
+                                                    <li>
+                                <a href="https://www.facebook.com/inovacnicentrumolomouckehokraje/" class="d-flex align-items-center justify-content-center" target="_blank"><svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"></path></svg></a>
+                            </li>
+                                                        <li>
+                                <a href="https://www.instagram.com/icok_cz/" class="d-flex align-items-center justify-content-center" target="_blank"><svg height="511pt" viewBox="0 0 511 511.9" width="511pt" xmlns="http://www.w3.org/2000/svg"><path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"></path><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"></path><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"></path></svg></a>
+                            </li>
+                                                        <li>
+                                <a href="https://www.linkedin.com/company/icok" class="d-flex align-items-center justify-content-center" target="_blank"><svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"></path><path d="m.396 7.977h4.976v16.023h-4.976z"></path><path d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"></path></svg></a>
+                            </li>
+                                                </ul>
+                                </div>
+            <div class="col-md-6" bis_skin_checked="1">
+                <ul id="menu-paticka" class="d-flex align-items-md-center justify-content-md-center flex-column flex-md-row justify-content-lg-start list-footer-bottom list-unstyled mt-4 mt-md-0 mb-4 mb-md-0"><li id="menu-item-136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136 nav-item"><a href="https://www.inovaceok.cz/ke-stazeni" class="nav-link text-white">Ke stažení</a></li>
+<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-135 nav-item"><a rel="privacy-policy" href="https://www.inovaceok.cz/ochrana-osobnich-udaju" class="nav-link text-white">Ochrana osobních údajů</a></li>
+</ul>            </div>
+            <div class="col-md-3" bis_skin_checked="1">
+                <p class="small text-white footer-copyright text-md-end mb-0">© ICOK</p>
+            </div>
+        </div>
+    </div>
+    <div class="container" bis_skin_checked="1">
+        <div class="row" bis_skin_checked="1">
+            <div class="col-lg-12" bis_skin_checked="1">
+                <div class="border-top mt-5 pt-5" bis_skin_checked="1"></div>
+                <div class="ms_signature" bis_skin_checked="1"><span>Made by</span> <a href="https://www.marketsoul.cz/tvorba-webovych-stranek-a-eshopu/" target="_blank"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<svg width="100%" height="100%" viewBox="0 0 400 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="LOGO" transform="matrix(1.41111,0,0,1.41111,-221.139,-203.289)">
+        <g transform="matrix(1,0,0,1,156.713,184.235)">
+            <path d="M0,-17.182L4.075,-17.182L8.59,-9.917L13.107,-17.182L17.182,-17.182L17.182,0L13.426,0L13.426,-11.218L8.59,-3.88L8.492,-3.88L3.705,-11.144L3.705,0L0,0L0,-17.182Z" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(1,0,0,1,192.806,174.122)">
+            <path d="M0,2.92L-2.282,-2.65L-4.565,2.92L0,2.92ZM-3.975,-7.193L-0.49,-7.193L6.873,10.113L2.922,10.113L1.351,6.26L-5.914,6.26L-7.485,10.113L-11.338,10.113L-3.975,-7.193Z" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(1,0,0,1,214.863,175.889)">
+            <path d="M0,-0.49C1.841,-0.49 2.896,-1.473 2.896,-2.92L2.896,-2.97C2.896,-4.589 1.767,-5.424 -0.074,-5.424L-3.829,-5.424L-3.829,-0.49L0,-0.49ZM-7.611,-8.836L0.244,-8.836C2.428,-8.836 4.123,-8.222 5.252,-7.093C6.21,-6.136 6.725,-4.787 6.725,-3.166L6.725,-3.118C6.725,-0.344 5.226,1.399 3.042,2.208L7.241,8.346L2.822,8.346L-0.859,2.848L-3.829,2.848L-3.829,8.346L-7.611,8.346L-7.611,-8.836Z" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(1,0,0,1,229.92,184.235)">
+            <path d="M0,-17.182L3.781,-17.182L3.781,-9.671L10.752,-17.182L15.317,-17.182L8.322,-9.893L15.637,0L11.096,0L5.768,-7.315L3.781,-5.253L3.781,0L0,0L0,-17.182Z" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(1,0,0,1,252.759,184.235)">
+            <path d="M0,-17.182L12.959,-17.182L12.959,-13.82L3.755,-13.82L3.755,-10.335L11.855,-10.335L11.855,-6.971L3.755,-6.971L3.755,-3.364L13.083,-3.364L13.083,0L0,0L0,-17.182Z" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(1,0,0,1,278.125,180.75)">
+            <path d="M0,-10.211L-5.228,-10.211L-5.228,-13.696L9.008,-13.696L9.008,-10.211L3.781,-10.211L3.781,3.485L0,3.485L0,-10.211Z" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(1,0,0,1,356.761,169.264)">
+            <path d="M0,12.173L2.232,9.497C3.779,10.774 5.4,11.583 7.363,11.583C8.91,11.583 9.843,10.97 9.843,9.965L9.843,9.915C9.843,8.957 9.253,8.468 6.381,7.73C2.92,6.847 0.687,5.89 0.687,2.478L0.687,2.428C0.687,-0.688 3.19,-2.75 6.701,-2.75C9.203,-2.75 11.34,-1.965 13.083,-0.566L11.118,2.282C9.597,1.227 8.1,0.587 6.651,0.587C5.204,0.587 4.443,1.251 4.443,2.084L4.443,2.134C4.443,3.263 5.178,3.631 8.148,4.393C11.634,5.3 13.598,6.553 13.598,9.547L13.598,9.597C13.598,13.008 10.996,14.923 7.289,14.923C4.689,14.923 2.063,14.014 0,12.173" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(1,0,0,1,392.118,175.301)">
+            <path d="M0,0.098L0,0.048C0,-2.896 -2.16,-5.352 -5.204,-5.352C-8.248,-5.352 -10.359,-2.946 -10.359,0L-10.359,0.048C-10.359,2.994 -8.198,5.448 -5.154,5.448C-2.112,5.448 0,3.044 0,0.098M-14.31,0.098L-14.31,0.048C-14.31,-4.836 -10.456,-8.836 -5.154,-8.836C0.146,-8.836 3.951,-4.884 3.951,0L3.951,0.048C3.951,4.933 0.098,8.934 -5.204,8.934C-10.506,8.934 -14.31,4.982 -14.31,0.098" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(1,0,0,1,404.085,174.394)">
+            <path d="M0,2.183L0,-7.634L3.779,-7.634L3.779,2.085C3.779,4.883 5.178,6.332 7.487,6.332C9.793,6.332 11.192,4.933 11.192,2.209L11.192,-7.634L14.971,-7.634L14.971,2.061C14.971,7.265 12.051,9.817 7.437,9.817C2.822,9.817 0,7.239 0,2.183" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(1,0,0,1,427.832,183.941)">
+            <path d="M0,-17.182L3.779,-17.182L3.779,-3.438L12.345,-3.438L12.345,0L0,0L0,-17.182Z" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.865939,-0.50015,-0.50015,-0.865939,334.257,168.585)">
+            <path d="M-1.013,-0.271C-2.131,-0.271 -3.038,0.635 -3.037,1.754C-3.037,2.872 -2.13,3.778 -1.013,3.777C0.106,3.778 1.012,2.871 1.012,1.753C1.012,0.635 0.105,-0.271 -1.013,-0.271" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866028,-0.499995,-0.499995,-0.866028,334.978,174.679)">
+            <path d="M-0.634,-0.17C-1.336,-0.17 -1.903,0.399 -1.903,1.099C-1.903,1.799 -1.335,2.369 -0.634,2.368C0.067,2.369 0.635,1.799 0.635,1.099C0.635,0.399 0.067,-0.169 -0.634,-0.17" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866123,-0.499831,-0.499831,-0.866123,319.685,183.168)">
+            <path d="M-0.466,-0.125C-0.98,-0.126 -1.398,0.292 -1.398,0.807C-1.397,1.322 -0.981,1.739 -0.466,1.74C0.049,1.74 0.467,1.323 0.467,0.808C0.467,0.293 0.049,-0.125 -0.466,-0.125" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866123,-0.499831,-0.499831,-0.866123,326.796,184.101)">
+            <path d="M-0.466,-0.125C-0.98,-0.126 -1.398,0.292 -1.398,0.807C-1.397,1.322 -0.981,1.739 -0.466,1.74C0.049,1.74 0.467,1.323 0.467,0.808C0.467,0.293 0.049,-0.125 -0.466,-0.125" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866123,-0.499831,-0.499831,-0.866123,332.288,181.091)">
+            <path d="M-0.466,-0.125C-0.98,-0.125 -1.398,0.293 -1.398,0.807C-1.398,1.322 -0.981,1.74 -0.466,1.74C0.049,1.74 0.467,1.323 0.467,0.808C0.467,0.293 0.049,-0.124 -0.466,-0.125" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866018,-0.500013,-0.500013,-0.866018,315.298,179.043)">
+            <path d="M-0.77,-0.206C-1.622,-0.207 -2.311,0.483 -2.311,1.334C-2.311,2.185 -1.621,2.876 -0.77,2.875C0.081,2.876 0.771,2.185 0.77,1.335C0.77,0.484 0.081,-0.206 -0.77,-0.206" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.865991,-0.50006,-0.50006,-0.865991,314.479,172.891)">
+            <path d="M-1.091,-0.292C-2.295,-0.292 -3.271,0.684 -3.271,1.888C-3.271,3.093 -2.295,4.069 -1.091,4.069C0.114,4.069 1.09,3.093 1.09,1.888C1.09,0.684 0.114,-0.292 -1.091,-0.292" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866,-0.500044,-0.500044,-0.866,317.572,167.079)">
+            <path d="M-1.322,-0.354C-2.782,-0.354 -3.965,0.829 -3.965,2.29C-3.965,3.749 -2.782,4.933 -1.322,4.933C0.139,4.933 1.322,3.748 1.321,2.289C1.321,0.83 0.138,-0.354 -1.322,-0.354" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866047,-0.499962,-0.499962,-0.866047,323.463,163.865)">
+            <path d="M-1.414,-0.379C-2.975,-0.379 -4.24,0.887 -4.241,2.448C-4.241,4.01 -2.975,5.275 -1.414,5.275C0.148,5.276 1.413,4.01 1.414,2.448C1.413,0.887 0.148,-0.379 -1.414,-0.379" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.865979,-0.500081,-0.500081,-0.865979,329.793,164.418)">
+            <path d="M-1.269,-0.34C-2.671,-0.339 -3.807,0.797 -3.807,2.199C-3.806,3.6 -2.67,4.736 -1.269,4.735C0.133,4.735 1.269,3.599 1.269,2.198C1.269,0.796 0.132,-0.339 -1.269,-0.34" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.86599,-0.500061,-0.500061,-0.86599,344.111,163.222)">
+            <path d="M-1.941,-0.52C-4.085,-0.52 -5.822,1.217 -5.821,3.36C-5.822,5.505 -4.084,7.241 -1.941,7.241C0.203,7.242 1.941,5.504 1.94,3.36C1.939,1.216 0.203,-0.52 -1.941,-0.52" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866059,-0.499942,-0.499942,-0.866059,345.493,174.902)">
+            <path d="M-1.216,-0.326C-2.559,-0.326 -3.647,0.763 -3.648,2.106C-3.647,3.45 -2.559,4.538 -1.216,4.539C0.127,4.54 1.217,3.45 1.217,2.107C1.217,0.764 0.128,-0.325 -1.216,-0.326" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866134,-0.499811,-0.499811,-0.866134,316.18,191.174)">
+            <path d="M-0.893,-0.239C-1.879,-0.24 -2.679,0.561 -2.679,1.547C-2.679,2.534 -1.88,3.335 -0.893,3.335C0.093,3.335 0.895,2.535 0.895,1.548C0.896,0.562 0.096,-0.239 -0.893,-0.239" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866134,-0.499811,-0.499811,-0.866134,329.81,192.961)">
+            <path d="M-0.893,-0.239C-1.879,-0.24 -2.679,0.561 -2.679,1.547C-2.679,2.534 -1.88,3.335 -0.893,3.335C0.094,3.334 0.895,2.535 0.895,1.548C0.896,0.562 0.096,-0.239 -0.893,-0.239" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866134,-0.499811,-0.499811,-0.866134,340.336,187.192)">
+            <path d="M-0.893,-0.239C-1.879,-0.24 -2.679,0.561 -2.679,1.547C-2.679,2.534 -1.88,3.335 -0.893,3.335C0.093,3.335 0.895,2.535 0.895,1.548C0.896,0.562 0.096,-0.239 -0.893,-0.239" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866078,-0.499908,-0.499908,-0.866078,307.771,183.267)">
+            <path d="M-1.477,-0.396C-3.108,-0.396 -4.429,0.926 -4.429,2.558C-4.431,4.188 -3.108,5.512 -1.477,5.512C0.154,5.512 1.477,4.19 1.478,2.558C1.477,0.927 0.155,-0.395 -1.477,-0.396" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.865974,-0.500088,-0.500088,-0.865974,306.201,171.474)">
+            <path d="M-2.091,-0.56C-4.4,-0.559 -6.272,1.312 -6.271,3.619C-6.271,5.929 -4.399,7.801 -2.09,7.8C0.218,7.8 2.09,5.929 2.09,3.619C2.09,1.311 0.218,-0.561 -2.091,-0.56" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866018,-0.500013,-0.500013,-0.866018,312.129,160.334)">
+            <path d="M-2.534,-0.679C-5.332,-0.678 -7.601,1.59 -7.6,4.388C-7.6,7.187 -5.332,9.455 -2.534,9.455C0.265,9.455 2.534,7.186 2.532,4.388C2.533,1.59 0.265,-0.679 -2.534,-0.679" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.866003,-0.500039,-0.500039,-0.866003,323.422,154.174)">
+            <path d="M-2.71,-0.726C-5.703,-0.726 -8.128,1.701 -8.128,4.693C-8.129,7.686 -5.702,10.113 -2.71,10.111C0.284,10.112 2.71,7.686 2.709,4.693C2.71,1.7 0.283,-0.726 -2.71,-0.726" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0.865989,-0.500064,-0.500064,-0.865989,335.555,155.234)">
+            <path d="M-2.433,-0.652C-5.119,-0.65 -7.296,1.526 -7.297,4.214C-7.296,6.9 -5.119,9.077 -2.433,9.077C0.254,9.077 2.432,6.899 2.432,4.213C2.432,1.526 0.254,-0.651 -2.433,-0.652" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+        <g transform="matrix(0,1,1,0,321.938,167.573)">
+            <path d="M3.234,-3.234C5.02,-3.234 6.468,-1.786 6.468,0C6.468,1.786 5.02,3.234 3.234,3.234C1.448,3.234 0,1.786 0,0C0,-1.786 1.448,-3.234 3.234,-3.234" style="fill:rgb(0,0,0);fill-rule:nonzero;"></path>
+        </g>
+    </g>
+</svg>
+</a></div>            </div>
+        </div>
+    </div>
+</div>
+<button type="button" id="scroll-to-top" class="d-flex align-items-center flex-column justify-content-center position-fixed">
+    <div class="d-flex align-items-center justify-content-center mb-2" bis_skin_checked="1">
+        <svg width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 12L12 1.64706L23 12"></path>
+<path d="M1 12L12 1.64706L23 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+    </div>
+</button>
+    <div id="logo_pin" class="active" bis_skin_checked="1">
+<!--        <button type="button" class="close d-flex align-items-center justify-content-center">-->
+<!--            --><!--        </button>-->
+        <button type="button" class="open d-flex align-items-center justify-content-center">
+            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.3939 7.14541C17.3939 9.69955 15.2125 11.7385 12.6145 11.5083C10.3125 11.311 8.62434 9.22818 8.62434 6.91521V5.61073C8.62434 3.29776 10.3125 1.21498 12.6145 1.01767C15.2125 0.787467 17.3939 2.83736 17.3939 5.38053V7.14541Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15.3111 15.5752L13.8422 17.3291C13.4038 17.8553 12.6035 17.8553 12.1651 17.3291L10.6962 15.5752C10.0823 14.8407 9.06282 14.5667 8.18587 14.9503C4.27244 16.6494 1.44425 20.3655 1.00577 24.7832C0.940003 25.43 1.44425 26 2.10197 26H23.9053C24.5631 26 25.0673 25.43 25.0015 24.7832C24.5521 20.3655 21.7239 16.6494 17.8214 14.9503C16.9445 14.5667 15.925 14.8517 15.3111 15.5752Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+        </button>
+        <div class="logo_pin_content text-center" bis_skin_checked="1">
+                            <div class="logo_pin_container bg-white pt-4 pb-4 mb-4" bis_skin_checked="1">
+                    <img src="Pro%20m%C3%A9dia%20-%20ICOK_files/logo-default.svg" alt="ICOK">
+                </div>
+                            <h3>Logo ICOK</h3>
+            <p>19.05 KB</p>
+                <a href="https://www.inovaceok.cz/wp-content/themes/soul/img/icons/logo-default.svg" class="btn btn-outline-dark" download="">Stáhnout</a>
+        </div>
+    </div>
+    
+<!-- Consent Management powered by Complianz | GDPR/CCPA Cookie Consent https://wordpress.org/plugins/complianz-gdpr -->
+
+					<div id="cmplz-manage-consent" data-nosnippet="true" bis_skin_checked="1"><button class="cmplz-btn cmplz-manage-consent manage-consent-1 cmplz-show">Spravovat souhlas</button>
+
+</div><script src="Pro%20m%C3%A9dia%20-%20ICOK_files/hooks.min.js" id="wp-hooks-js"></script>
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/i18n.min.js" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/index_002.js" id="swv-js"></script>
+<script id="contact-form-7-js-extra">
+var wpcf7 = {"api":{"root":"https:\/\/www.inovaceok.cz\/wp-json\/","namespace":"contact-form-7\/v1"}};
+</script>
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/index_003.js" id="contact-form-7-js"></script>
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/aos.js" id="aos-js"></script>
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/fslightbox.js" id="fslightbox-js"></script>
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/slick.min.js" id="slick-js-js"></script>
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/bootstrap.bundle.min.js" id="bootstrap-scripts-js"></script>
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/main.min.js" id="soul-scripts-js"></script>
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/api.js" id="google-recaptcha-js"></script>
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/wp-polyfill.min.js" id="wp-polyfill-js"></script>
+<script id="wpcf7-recaptcha-js-extra">
+var wpcf7_recaptcha = {"sitekey":"6LfFahopAAAAAEB5x-aYU0V26UZ3wLX-fKNe_wrv","actions":{"homepage":"homepage","contactform":"contactform"}};
+</script>
+<script src="Pro%20m%C3%A9dia%20-%20ICOK_files/index.js" id="wpcf7-recaptcha-js"></script>
+<script id="cmplz-cookiebanner-js-extra">
+var complianz = {"prefix":"cmplz_","user_banner_id":"1","set_cookies":[],"block_ajax_content":"","banner_version":"15","version":"7.1.0","store_consent":"","do_not_track_enabled":"","consenttype":"optin","region":"eu","geoip":"","dismiss_timeout":"","disable_cookiebanner":"","soft_cookiewall":"","dismiss_on_scroll":"","cookie_expiry":"365","url":"https:\/\/www.inovaceok.cz\/wp-json\/complianz\/v1\/","locale":"lang=cs&locale=cs_CZ","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"18","cookie_path":"\/","categories":{"statistics":"statistika","marketing":"marketing"},"tcf_active":"","placeholdertext":"Klepnut\u00edm p\u0159ijm\u011bte marketingov\u00e9 soubory cookie a povolte tento obsah","css_file":"https:\/\/www.inovaceok.cz\/wp-content\/uploads\/complianz\/css\/banner-{banner_id}-{type}.css?v=15","page_links":{"eu":{"cookie-statement":{"title":"Soubory cookies","url":"https:\/\/www.inovaceok.cz\/soubory-cookies"},"privacy-statement":{"title":"Ochrana osobn\u00edch \u00fadaj\u016f","url":"https:\/\/www.inovaceok.cz\/ochrana-osobnich-udaju"}}},"tm_categories":"1","forceEnableStats":"","preview":"","clean_cookies":"","aria_label":"Klepnut\u00edm p\u0159ijm\u011bte marketingov\u00e9 soubory cookie a povolte tento obsah"};
+</script>
+<script defer="defer" src="Pro%20m%C3%A9dia%20-%20ICOK_files/complianz.min.js" id="cmplz-cookiebanner-js"></script>
+<!-- Statistics script Complianz GDPR/CCPA -->
+						<script data-category="functional">
+							(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WPHPFXJS');
+						</script><svg class="svg position-absolute bottom-0" style="z-index:-1;">
+    <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.75,0.333 H0.666 A0.167,0.167,0,0,0,0.833,0.167 V0.333 H0.75 M0.666,0 V0.167 A0.167,0.167,0,0,0,0.5,0 H0.167 a0.167,0.167,0,0,0,0,0.333 H0 c0,0.184,0.149,0.333,0.333,0.333 H0.167 v0.083 A0.083,0.083,0,0,0,0.083,0.667 H0 v0.083 a0.083,0.083,0,0,0,0.083,0.083 H0.167 V1 H1 V0.583 a0.083,0.083,0,0,0,-0.083,-0.083 H1 V0.333 H0.833 A0.167,0.167,0,0,0,1,0.167 V0 M0.083,0.833 A0.083,0.083,0,1,0,0.167,0.917 A0.083,0.083,0,0,0,0.083,0.833"></path></clipPath>
+</svg>
+
+
+<div bis_skin_checked="1"><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;" bis_skin_checked="1"><div class="grecaptcha-logo" bis_skin_checked="1"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-x0m56tt4vfpj" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="Pro%20m%C3%A9dia%20-%20ICOK_files/anchor.html" bis_size="{&quot;x&quot;:1824,&quot;y&quot;:1296,&quot;w&quot;:256,&quot;h&quot;:60,&quot;abs_x&quot;:1824,&quot;abs_y&quot;:1296}"></iframe></div><div class="grecaptcha-error" bis_skin_checked="1"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;">03AFcWeA4Y8zBWAuX-49zLjayTwFnafNSmhl7cp8fY0sEs_AjvDTUaULlzuMbrCCfFg1HE4fUL6l4S2Ko301Y6H2-
+AlYLZNnbp2rTkA_6MzI8p1WotmvFjuXZZ0Z0WvJ6z9_Qr4aLqg4VVv1okhZPBMKgXI_q9Vjus97yqIQli6IMdGcF4f-3qpL1ZO_cMJxUrz-
+ijSATesF08nWro-_OWF_AKHqak0yY1M9wLc_2_Od1_ZGoyRL3VT4xTOERmrM3-
+s8t0rRLVUjNZ85DgQtY9t0NDYV7r5DSQJX88B_FrboPZ2qeWPEH8-
+_HfrDRDKyufZCOj9Xx4WTrynhRQaK8qu8Osa2SZSjuYCSrWmqTLYo0Z5OuONv3bgBoUGp_Mpr-
+UeF4wr8DyDwRcKil0YyuAP-oWVLgaXLQYE4TM4yyp2CVgHHdUKbYbOI-
+mxAqz7RYHeecMuvZeV5tkLhoIInHYaZ7BjMMWb-
+gnnNJGLkn_Fw4RXTAfsspHd5CQZJOFWT4rS20Pbh21Gkjh_m5cBUeDYz5Xza2uD42Y25lnfWeA6SZn68T6rCUGYhRxzbg7PobbNboSKcz5Lh63sszihiPiXAKtO6DqhFacfyJQvi5VilPUlpYN6sEB_VG3EJk9wnhPXNPgX9jmlxBu0sCclxiIhDaKjERj_UmjQ-
+L4pGnG7-nqdl1sPprsZz-
+JVLZPkrUXUWHyf3G6uEQau5Civ2hfANVBbM8PWCX0z_NyELbjF_Ui4Mry61yX34kjn9GeFzPLtukGO2NDI9GiyBHOsHpOhI3fsru-5A3sY3pxKgE_sVg4_9uO8ycdZIL3_SUEqE4pqz4rvdqoGWbDQlpCdq7sVt6iRv6EoBRhpyrJ66W-
+t3hwJm1av-
+sqq9sGMhRlV39cV1KaWPq7cQJrGCzxVk16NqalC82NG6RSmRi_dbI9qNV1eizsRvmzGzoItDzy1juLjv02rD6NJHm5TVHpcU7fMDTDp61wMN1FkmnOW-
+y3kcOs7Fbh9gN34DaYy88l4e5ca2dRtB0-lBGwcQ3XRGGBkx9Cnr2uRLCElCmE-
+LipvkoJLgzxQ-
+EyC0idKROxF6RFB7JoRc7tYstjca_SzYMCVv5OTQgH0btY7V1cZzhTzTsYcsViGgGEtoAw9XSVu-
+Q0yqczcV8uGW8NXPaWlAuax5hY1ed9Ma8XgZzdO4V5eCKjGt9nV-
+bHenXI6BqYqNmo5avm_jpZbswc-9pXN3xZf-
+BVjxu7AZ4wZ1uqSRvMUlgJ2yUdjWonl4_zfGkxh-
+U7QbieyBDk_pgJba6sRv2iB3IN9kmBB7bxioKAMxmtaIJ625vy50yP9vs6SkUiQfOOd8NYi5BLsgYkMuHMcSIfiLlZM6vBcX6EB698HUjbrMPzj4jyI9THA3e9rwARzPq6haRyWKkYndXhpvDJDGb4yTd0faeK5WuCWFqkz7HtKNOKnciSNt7K4x1EmtDLJOmli1PNDT37rn15A_x_5wKY71UXNXo2x-
+JjtdMiVmZa853sxfSQpjJH2fJVHlA0D_-
+fXKWeeMoQbKt6w92HQNFUyLdyQGRng_QDatBOYVxBPYHAkSxYqCLbNT7KfuQrUhxG29vqY-
+A5xiuD5aT_hAs-
+rCJgKeuhwCSbURrQMLzZDI354pJQzV2INKQaQTL7W1mkmpXAAyWIYPkv05ldctS7pqr-
+K8Il1VFce-c6OPvbJ989cwXpVA-5FbUEO4IK3MkZmTMgnRub-
+yVVMCVNoc3_pvjnCxLEZsei4GxTw0yoqS1S2W5zre_gqZt7-
+MqJSi4pewv5K3SVQPi2zewkUMCYHH8C1cdaFcoVx0A03MpMInW5mXtTf1PZ5g9OAF8Mb97ah-
+Jzc3Er5MQt8zM3MxJmTp2msf-
+FjYf3toXMqjDYTZvHGjLB2tRPGGScU7e_AjFCr3F3yWIjKTuxh9_5t0tpXSbHv-
+jM2rsOi5x3pmv8neX-VnUX5Hw0uhJn5stZ1Ecqpr-
+pTNUYcYZht2nS1SomPlBRfWU75VKU9SVwp9fj0Mla1gBXAF-
+TDzJC0PLWxdM-6yUZNaJgPFifO4n9yqbHiISTvypa0iBCVugkpr_1kKV7UGEFX-RT-bL5b-
+LNk9j5FRiB0t_WcZvz</textarea></div><iframe style="display: none;"></iframe></div></body></html>
